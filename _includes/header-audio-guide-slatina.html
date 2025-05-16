@@ -1,0 +1,33 @@
+<header class="site-header-audio-ghid">
+  <div class="logo">
+    <a href="{{ site.github.url }}/">
+      <img
+        src="{{ site.github.url }}/assets/img/logo-voiceyourplace.png"
+        alt="Logo Voice Your Place"
+      />
+    </a>
+  </div>
+  <nav class="menu-list-audio-ghid">
+    {% for item in site.data.settings.ro-menu-slatina %}
+    <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link-audio-ghid"
+      >{{ item.name }}</a
+    >
+    {% endfor %}
+  </nav>
+  <div class="dropdown-audio-ghid">
+    <button class="dropbtn-audio-ghid">
+      <i
+        class="fa fa-bars custom-icon"
+        style="font-size: 40px; padding-top: 20px"
+        aria-hidden="true"
+      ></i>
+    </button>
+    <div class="dropdown-content-audio-ghid">
+      {% for item in site.data.settings.ro-menu-slatina %}
+      <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link"
+        >{{ item.name }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,74 @@
+<footer class="footer">
+  <div class="footer-responsive">
+    <div class="footer-column">
+      <p>PAGINI:</p>
+      <ul class="footer-list">
+        <a href="/ro/biserica-sfanta-treime"><li>Slatina</li></a>
+        <a href="/ro/audio-guide-slatina"><li>Audio Ghid</li></a>
+        <a href="/ro/community-slatina"><li>Comunitate</li></a>
+        <a href="/ro/project-slatina"><li>Proiect</li></a>
+        <a href="/ro/contact"><li>Contact</li></a>
+      </ul>
+    </div>
+
+    <div class="center-column">
+      <p>Urmăriți-ne pe:</p>
+      <div class="social-media-wrapper-footer">
+        {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" target="_blank"
+          ><img
+            src="{{ site.github.url }}/assets/img/{{ item.image }}"
+            alt="{{ item.alt }}"
+        /></a>
+        {% endfor %}
+      </div>
+      <p>
+        CONTACT:
+        <br />
+        <a
+          href="mailto:voiceyourplace@gmail.com?subject = Feedback&body = Message"
+          style="color: #000000"
+        >
+          voiceyourplace@gmail.com
+        </a>
+      </p>
+      <div class="footer-description-home-page">
+        <a href="{{ site.github.url }}/">{{ site.footer }} </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <img
+        src="{{ site.url }}{{ site.baseurl }}/assets/img/sticker-footer.svg"
+        class="footer-image"
+        alt="Sticker VoiceYourPlace"
+      />
+    </div>
+  </div>
+
+  <div class="center-column-responsive">
+    <p>Urmăriți-ne pe:</p>
+    <div class="social-media-wrapper-footer">
+      {% for item in site.data.settings.social %}
+      <a href="{{ item.link }}" target="_blank"
+        ><img
+          src="{{ site.github.url }}/assets/img/{{ item.image }}"
+          alt="{{ item.alt }}"
+      /></a>
+      {% endfor %}
+    </div>
+    <p>
+      CONTACT:
+      <br />
+      <a
+        href="mailto:voiceyourplace@gmail.com?subject = Feedback&body = Message"
+        style="color: #000000"
+      >
+        voiceyourplace@gmail.com
+      </a>
+    </p>
+    <div class="footer-description-home-page">
+      <a href="{{ site.github.url }}/">{{ site.footer }} </a>
+    </div>
+  </div>
+</footer>

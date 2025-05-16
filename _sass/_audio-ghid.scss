@@ -9,6 +9,7 @@
   min-height: 100vh;
   text-align: justify;
 }
+
 .container-audio-ghid a {
   text-decoration: underline;
 }
@@ -384,6 +385,13 @@
 
   .image-wrapper img {
     width: 100%;
+    border-radius: 5%;
+  }
+
+  .image-wrapper figcaption {
+    color: #ffffff;
+    font-size: 10px;
+    font-style: normal;
   }
 
   .audio-video-locuri-povesti {
@@ -417,6 +425,7 @@
 
   .image-wrapper {
     width: 80%;
+    display: block;
   }
 }
 

@@ -14,6 +14,13 @@ ro-menu:
   - { name: "Contact", url: "ro/contact" }
   - { name: "EN", url: "en" }
 
+ro-menu-slatina:
+  - { name: "Slatina", url: "ro/biserica-sfanta-treime" }
+  - { name: "Audio ghid", url: "ro/audio-guide-slatina" }
+  - { name: "Comunitate", url: "ro/community-slatina" }
+  - { name: "Proiect", url: "ro/project-slatina" }
+  - { name: "Contact", url: "ro/contact" }
+
 en-menu:
   - { name: "Curtea de Argeș", url: "en/biserica-domneasca" }
   - { name: "Audio guide", url: "en/audio-guide" }

@@ -1,0 +1,30 @@
+<header class="site-header-home">
+  <div class="logo">
+    <a href="{{ site.github.url }}/">
+      <img src="{{ site.github.url }}/assets/img/logo-voiceyourplace.png" />
+    </a>
+  </div>
+  <nav class="menu-list-home">
+    {% for item in site.data.settings.ro-menu-slatina %}
+    <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link-home"
+      >{{ item.name }}</a
+    >
+    {% endfor %}
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn">
+      <i
+        class="fa fa-bars custom-icon"
+        style="font-size: 40px; padding-top: 20px"
+        aria-hidden="true"
+      ></i>
+    </button>
+    <div class="dropdown-content">
+      {% for item in site.data.settings.ro-menu-slatina %}
+      <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link"
+        >{{ item.name }}</a
+      >
+      {% endfor %}
+    </div>
+  </div>
+</header>

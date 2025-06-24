@@ -29,6 +29,12 @@ en-menu:
   - { name: "Contact", url: "en/contact" }
   - { name: "RO", url: "" }
 
+en-menu-slatina:
+  - { name: "Slatina", url: "en/biserica-sfanta-treime" }
+  - { name: "Audio guide", url: "en/audio-guide-slatina" }
+  - { name: "Project", url: "en/project-slatina" }
+  - { name: "Contact", url: "en/contact" }
+
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
   - {
@@ -67,10 +73,24 @@ social-partners:
       alt: "Parteneri si sponsori",
     }
 
+social-partners-slatina:
+  - {
+      name: "Partners & Sponsors",
+      image: "partners-sponsors-slatina.png",
+      alt: "Parteneri si sponsori",
+    }
+
 en-social-partners:
   - {
       name: "Partners & Sponsors",
       image: "en-partners-sponsors.png",
+      alt: "Partners & Sponsors",
+    }
+
+en-social-partners-slatina:
+  - {
+      name: "Partners & Sponsors",
+      image: "en-partners-sponsors-slatina.png",
       alt: "Partners & Sponsors",
     }
 

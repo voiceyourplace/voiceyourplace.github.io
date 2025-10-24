@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.light {
+  filter: brightness(0) invert(1);
+}

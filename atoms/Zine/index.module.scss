@@ -1,0 +1,23 @@
+.zineWrapper {
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zine {
+  width: 88%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}
+
+.zineLink {
+  border: 1.5px solid #000;
+  border-radius: 30px;
+  max-width: 80vw;
+  padding: 20px 15px;
+  cursor: pointer;
+}

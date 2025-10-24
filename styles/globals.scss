@@ -1,0 +1,41 @@
+:root {
+  --text: #000;
+  --brand-color: #25215e;
+
+  font-family: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: 'Raleway', sans-serif;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    text-rendering: optimizeLegibility;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+}

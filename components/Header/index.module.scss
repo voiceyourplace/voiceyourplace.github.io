@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  justify-content: center;
+
+  min-height: 56px;
+  width: 100%;
+  z-index: 200;
+  top: 0;
+  background: #fff;
+
+  @media (max-width: $container-width) {
+    position: sticky;
+  }
+
+  &.colored {
+    background: var(--brand-color);
+
+    .burger span {
+      background: #fff;
+    }
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.logo a {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: var(--text);
+}
+
+.logo {
+  img {
+    margin-top: 30px;
+    max-width: 172px;
+    max-height: 172px;
+  }
+
+  @media (max-width: $container-width) {
+    img {
+      height: 100px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+
+  @media (min-width: $container-width) {
+    margin-top: 30px;
+    margin-left: auto;
+    line-height: 56px;
+  }
+
+  a,
+  span {
+    // opacity: 0.9;
+    font-size: 19.2px;
+    color: #25215e;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.burger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  align-self: center;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: $container-width) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      width: 40px;
+      height: 6px;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    right: 1rem;
+    top: 56px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+
+    span {
+      color: var(--brand-color) !important;
+    }
+  }
+  .open {
+    display: flex;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  .logo {
+    img {
+      margin: 0;
+    }
+
+    a {
+      height: 0;
+    }
+  }
+}
+
+.dropdownSelectZone {
+  position: relative;
+}
+
+.citiesDropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: var(--brand-color) !important;
+  }
+}

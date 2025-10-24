@@ -1,0 +1,162 @@
+.title,
+.titleMobile {
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  font-size: 32px;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  font-weight: 650;
+}
+
+.titleMobile {
+  display: none;
+  margin: 20px 10% 0 10%;
+}
+
+.zineMobile,
+.zineDesktop {
+  width: 100%;
+}
+
+.zineMobile {
+  display: none;
+}
+
+@media (max-width: $container-width) {
+  .title {
+    display: none;
+  }
+
+  .titleMobile {
+    display: block;
+  }
+
+  .zineMobile {
+    display: block;
+  }
+
+  .zineDesktop {
+    display: none;
+  }
+}
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 60%;
+  padding-top: 66px;
+
+  p {
+    line-height: 20.4px;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 0;
+  }
+
+  @media (max-width: $container-width) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    padding-top: 0;
+
+    p {
+      line-height: 1.5;
+      padding: 0 6%;
+      font-size: 14px;
+    }
+  }
+}
+
+.projectLeftHalf,
+.projectRightHalf {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 200px;
+
+  figure {
+    margin: 0 0 10px 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: right;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  @media (max-width: $container-width) {
+    figcaption {
+      padding: 0 20px;
+    }
+  }
+}
+
+.presentation {
+  @media (max-width: $container-width) {
+    padding-top: 20px;
+  }
+}
+
+.projectLeftHalf {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p:first-child {
+    padding-top: 20px;
+  }
+
+  @media (max-width: $container-width) {
+    width: 100%;
+    flex-direction: column-reverse;
+
+    figure {
+      margin: 0;
+    }
+
+    p:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.projectRightHalf {
+  @media (max-width: $container-width) {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.socialSponsors {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  img {
+    width: 60%;
+  }
+
+  @media (max-width: $container-width) {
+    margin-top: 20px;
+
+    img {
+      width: 94%;
+      height: auto;
+    }
+  }
+}

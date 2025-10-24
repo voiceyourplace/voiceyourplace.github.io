@@ -1,0 +1,33 @@
+.qrFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.socialsWrapper {
+  height: 45px;
+
+  img {
+    max-width: 45px;
+  }
+}

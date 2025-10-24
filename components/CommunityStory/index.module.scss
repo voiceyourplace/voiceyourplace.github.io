@@ -1,0 +1,52 @@
+.communityStoryWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.communityStoryTitle {
+  width: 35%;
+  margin-top: 10px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 550;
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  @media (max-width: $container-width) {
+    width: 80%;
+  }
+}
+
+.communityStoryContent {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding-bottom: 5%;
+
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $container-width) {
+    width: 80%;
+  }
+}
+
+.communityStoryFooter {
+  margin: 30px;
+  font-size: 12px;
+  font-style: italic;
+}

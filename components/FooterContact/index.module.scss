@@ -1,0 +1,46 @@
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-weight: 500;
+  }
+}
+
+.socialMediaFooterWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 35%;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+
+  a {
+    color: #000;
+  }
+}
+
+@media (max-width: $container-width) {
+  .socialMediaFooterWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+}

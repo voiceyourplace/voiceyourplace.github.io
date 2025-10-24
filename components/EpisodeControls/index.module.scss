@@ -1,0 +1,88 @@
+.episodeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+    max-width: 550px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  @media (max-width: $container-width) {
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  .icon {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+
+  .mobileControlIcon {
+    display: none;
+
+    img {
+      width: 18px;
+    }
+  }
+
+  @media (max-width: $container-width) {
+    .mobileControlIcon {
+      display: block;
+    }
+  }
+}
+
+.episodeControls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  img {
+    width: 29px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  gap: 10px;
+
+  @media (max-width: $container-width) {
+    display: none;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+}
+
+.prevButton {
+  padding-right: 5%;
+}
+
+.nextButton {
+  padding-left: 5%;
+}

@@ -1,0 +1,72 @@
+.homeContent {
+  display: flex;
+  width: 100%;
+
+  @media (max-width: $container-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.desktopFooter {
+  padding-top: 20%;
+
+  @media (max-width: $container-width) {
+    display: none;
+  }
+}
+
+.mobileFooter {
+  display: none;
+
+  @media (max-width: $container-width) {
+    display: block;
+  }
+}
+
+.playIcon {
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $container-width) {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.homeTextSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 19%;
+  font-size: large;
+  text-align: justify;
+
+  h1 {
+    margin: 0 auto 8px 0;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--brand-color);
+    text-decoration: underline;
+  }
+
+  @media (max-width: $container-width) {
+    padding: 10% 10% 0 10%;
+  }
+}
+
+.homeImageSection {
+  flex: 4;
+  padding-left: 40px;
+
+  @media (max-width: $container-width) {
+    padding: 0;
+  }
+}

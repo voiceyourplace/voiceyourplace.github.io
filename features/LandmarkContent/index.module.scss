@@ -1,0 +1,249 @@
+.curteaDeArgesContent {
+  background-color: var(--brand-color);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.about {
+  display: flex;
+  width: 50%;
+
+  > p {
+    width: 180px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 25.6px;
+  }
+
+  @media (max-width: $container-width) {
+    width: 80%;
+    flex-direction: column;
+
+    > p {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  p {
+    margin: 0;
+    text-align: justify;
+    line-height: 25.6px;
+  }
+
+  @media (max-width: $container-width) {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.episodeImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 600px;
+
+  p {
+    margin: 10px 0 0 0;
+  }
+
+  @media (max-width: $container-width) {
+    width: 80%;
+    border-radius: 5%;
+    max-width: 600px;
+  }
+}
+
+.moreAboutWrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px 0;
+
+  display: flex;
+  justify-content: center;
+
+  > * {
+    width: 70%;
+  }
+}
+
+.moreAbout {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+
+  p,
+  h3 {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+}
+
+.otherStoriesTitle {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  width: fit-content;
+
+  @media (max-width: $container-width) {
+    font-size: 18px;
+  }
+}
+
+.placesAndStoriesTitle {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 25px 0;
+  text-align: center;
+  position: static;
+  width: fit-content;
+
+  .desktopHand {
+    display: flex;
+    width: 20vw;
+    position: absolute;
+    margin-top: -12%;
+    max-width: 600px;
+    left: 0;
+  }
+
+  .mobileHand {
+    display: none;
+  }
+
+  @media (max-width: $container-width) {
+    position: relative;
+
+    .mobileHand {
+      display: flex;
+      transform: scaleX(-1) rotate(90deg);
+      position: absolute;
+      width: 50px;
+      margin-top: 0;
+      top: -80px;
+      left: -120px;
+    }
+
+    .desktopHand {
+      display: none;
+    }
+  }
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  align-items: center;
+  line-height: 28.8px;
+  width: 40%;
+
+  p {
+    text-align: justify;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .storyTitle {
+    font-size: 19px;
+    text-align: center;
+    font-weight: 650;
+  }
+
+  .storyAuthor {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: right;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  @media (max-width: $container-width) {
+    width: 80%;
+
+    p {
+      font-size: 14px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.caption {
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}
+
+.otherStories {
+  h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 0 0 30px 0;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.readOtherStoriesSlatina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  min-width: 300px;
+
+  h3 {
+    font-weight: 600;
+  }
+
+  h3,
+  p {
+    margin: 5px 0;
+    text-align: center;
+    color: #fff;
+  }
+
+  img {
+    position: absolute;
+    width: 90px;
+    z-index: -1;
+    right: -10px;
+    bottom: 35px;
+  }
+
+  @media (max-width: $container-width) {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

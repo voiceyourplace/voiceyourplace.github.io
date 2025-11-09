@@ -10,10 +10,12 @@
 }
 
 html,
-body,
-#__next {
-  height: 100%;
+body {
   overflow-x: hidden;
+}
+
+#__next {
+  min-height: 100vh;
 }
 
 body {

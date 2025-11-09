@@ -19,8 +19,8 @@ export default function App(props: Readonly<IAppProps>) {
   const { Component, pageProps } = props
   const router = useRouter()
   const isLocalhost =
-    typeof window !== "undefined" &&
-    !window.location.hostname.includes("voiceyourplace")
+    typeof window !== 'undefined' &&
+    !window.location.hostname.includes('voiceyourplace')
 
   const isHidingFooter = Object.keys(pageProps).length === 0
   // TODO: Improve the logic for the QR pages
@@ -31,16 +31,20 @@ export default function App(props: Readonly<IAppProps>) {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      // Send a GA4 page_view for SPA navigations
+      if (!url.includes('#')) {
+        window.scrollTo(0, 0);
+      }
+
+      // Send a GA4 page_view for SPA navigation
       const absolute = `${window.location.origin}${url}`;
-      window.gtag?.("event", "page_view", {
+      window.gtag?.('event', 'page_view', {
         page_location: absolute,
         page_title: document.title || undefined,
       });
     };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => router.events.off("routeChangeComplete", handleRouteChange);
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => router.events.off('routeChangeComplete', handleRouteChange);
   }, [router.events]);
 
   return (

@@ -357,7 +357,7 @@ export const SlatinaContent: SlatinaContentType = {
       backText: 'Despre audio ghid',
       backHref: 'audio-guide-slatina',
       nextText: 'Centrul Vechi al Slatinei',
-      nextHref: 'centru-vechi-slatina',
+      nextHref: 'centrul-vechi-slatina',
       audioSrc: '/assets/audio/slatina/VYP_Biserica_RO.mp3',
       imgSrc: '/assets/img/biserica-sfanta-treime.jpg',
       imgCaption: (
@@ -383,7 +383,7 @@ export const SlatinaContent: SlatinaContentType = {
       backText: 'About the Audio Guide',
       backHref: 'audio-guide-slatina',
       nextText: `Slatina's Old Center`,
-      nextHref: 'centru-vechi-slatina',
+      nextHref: 'centrul-vechi-slatina',
       audioSrc: '/assets/audio/slatina/VYP_Biserica_EN.mp3',
       imgSrc: '/assets/img/biserica-sfanta-treime.jpg',
       imgCaption: (
@@ -396,7 +396,7 @@ export const SlatinaContent: SlatinaContentType = {
       locationHref: 'https://maps.app.goo.gl/PMoCW8zyAkDkyoGV8',
     },
   },
-  'centru-vechi-slatina': {
+  'centrul-vechi-slatina': {
     ro: {
       title: 'Centrul Vechi al Slatinei',
       aboutEpisode: [
@@ -413,7 +413,7 @@ export const SlatinaContent: SlatinaContentType = {
       nextText: 'Casa Hanciu',
       nextHref: 'casa-hanciu',
       audioSrc: '/assets/audio/slatina/VYP_CentrulVechi_RO.mp3',
-      imgSrc: '/assets/img/centru-vechi-slatina.jpg',
+      imgSrc: '/assets/img/centrul-vechi-slatina.jpg',
       imgCaption: (
         <>
           <p>
@@ -441,7 +441,7 @@ export const SlatinaContent: SlatinaContentType = {
       nextText: 'The Hanciu House',
       nextHref: 'casa-hanciu',
       audioSrc: '/assets/audio/slatina/VYP_CentrulVechi_EN.mp3',
-      imgSrc: '/assets/img/centru-vechi-slatina.jpg',
+      imgSrc: '/assets/img/centrul-vechi-slatina.jpg',
       imgCaption: (
         <>
           <p>Lipscani Street and Minerva Cafe, Slatina`s Old Centre,</p>
@@ -465,9 +465,9 @@ export const SlatinaContent: SlatinaContentType = {
         'Clădirea a fost construită în 1883 de Petre Hanciu, care a deschis la parterul acesteia o berărie ce a funcționat până în anii 1930. Decorată în stil eclectic, cu două bovindouri pe colț și o bandă ornamentală cu spice de hamei, Casa Hanciu este una dintre cele mai memorabile din centrul vechi.',
       ],
       backText: 'Centrul Vechi al Slatinei',
-      backHref: 'centru-vechi-slatina',
+      backHref: 'centrul-vechi-slatina',
       nextText: 'Fostul cinematograf Victoria',
-      nextHref: 'cinematograf-victoria',
+      nextHref: 'cinematograful-victoria',
       audioSrc: '/assets/audio/slatina/VYP_CasaHanciu_RO.mp3',
       imgSrc: '/assets/img/casa-hanciu.jpg',
       imgCaption: (
@@ -491,9 +491,9 @@ export const SlatinaContent: SlatinaContentType = {
         'It was built in 1883 by Petre Hanciu, who opened a brewery on the ground floor of the building, which operated until the 1930s. Decorated in an eclectic style, with two corner bay windows and an ornamental band depicting hop spikes, the Hanciu House is one of the most memorable in the old town.',
       ],
       backText: `Slatina's Old Center`,
-      backHref: 'centru-vechi-slatina',
+      backHref: 'centrul-vechi-slatina',
       nextText: 'The former Victoria Cinema',
-      nextHref: 'cinematograf-victoria',
+      nextHref: 'cinematograful-victoria',
       audioSrc: '/assets/audio/slatina/VYP_CasaHanciu_EN.mp3',
       imgSrc: '/assets/img/casa-hanciu.jpg',
       imgCaption: (
@@ -506,7 +506,7 @@ export const SlatinaContent: SlatinaContentType = {
       locationHref: 'https://maps.app.goo.gl/corV5uNrsiZXv5Ad8',
     },
   },
-  'cinematograf-victoria': {
+  'cinematograful-victoria': {
     ro: {
       title: 'Fostul cinematograf Victoria',
       aboutEpisode: [
@@ -523,7 +523,7 @@ export const SlatinaContent: SlatinaContentType = {
       nextText: 'Casa Fântâneanu',
       nextHref: 'casa-fantaneanu',
       audioSrc: '/assets/audio/slatina/VYP_CinemaVictoria_RO.mp3',
-      imgSrc: '/assets/img/cinematograf-victoria.jpg',
+      imgSrc: '/assets/img/cinematograful-victoria.jpg',
       story: communityStoryContent['destin-in-sala-veche']['ro'],
       imgCaption: (
         <>
@@ -550,7 +550,7 @@ export const SlatinaContent: SlatinaContentType = {
       nextText: 'The Fântâneanu House',
       nextHref: 'casa-fantaneanu',
       audioSrc: '/assets/audio/slatina/VYP_CinemaVictoria_EN.mp3',
-      imgSrc: '/assets/img/cinematograf-victoria.jpg',
+      imgSrc: '/assets/img/cinematograful-victoria.jpg',
       imgCaption: (
         <>
           <p>The former cinema before 1990.</p>
@@ -574,7 +574,7 @@ export const SlatinaContent: SlatinaContentType = {
         'Ridicată la începutul secolului 19 de familia Lânaru și cumpărată ulterior de familia de boieri Fântâneanu, care o remodelează la sfârșitul secolului într-un stil eclectic impecabil, clădirea este una dintre cele mai valoroase monumente istorice din Slatina.',
       ],
       backText: 'Fostul cinematograf Victoria',
-      backHref: 'cinematograf-victoria',
+      backHref: 'cinematograful-victoria',
       nextText: 'Podul peste Olt',
       nextHref: 'podul-olt',
       audioSrc: '/assets/audio/slatina/VYP_CasaFantaneanu_RO.mp3',
@@ -600,7 +600,7 @@ export const SlatinaContent: SlatinaContentType = {
         'Built at the beginning of the 19th century by Lânaru family and later bought by the Fântânenau family of boyards, it was remodelled at the end of the 19th century in an impeccable eclectic style. It is one of the most valuable historical monuments in Slatina',
       ],
       backText: 'The former Victoria Cinema',
-      backHref: 'cinematograf-victoria',
+      backHref: 'cinematograful-victoria',
       nextText: 'The bridge over the Olt river',
       nextHref: 'podul-olt',
       audioSrc: '/assets/audio/slatina/VYP_CasaFantaneanu_EN.mp3',
@@ -628,7 +628,7 @@ export const SlatinaContent: SlatinaContentType = {
         'Construit între 1888-1891, pe locul unui mai vechi pod de luntre ce exista în Slatina încă din Evul Mediu, acest pod metalic cu zăbrele este o realizare tehnologică a secolului 19 și unul dintre primele de acest tip construite pe teritoriul României.',
       ],
       backText: 'Fostul cinematograf Victoria',
-      backHref: 'cinematograf-victoria',
+      backHref: 'cinematograful-victoria',
       nextText: 'Despre audio ghid',
       nextHref: 'audio-guide-slatina',
       audioSrc: '/assets/audio/slatina/VYP_Podul_RO.mp3',
@@ -654,7 +654,7 @@ export const SlatinaContent: SlatinaContentType = {
         'Built between 1888 and 1891 on the site of an older bridge that existed in Slatina since the Middle Ages, this metal lattice girder bridge is a technological achievement of the 19th century and one of the first of its kind built in Romania.',
       ],
       backText: 'The former Victoria Cinema',
-      backHref: 'cinematograf-victoria',
+      backHref: 'cinematograful-victoria',
       nextText: 'About the Audio Guide',
       nextHref: 'audio-guide-slatina',
       audioSrc: '/assets/audio/slatina/VYP_Podul_EN.mp3',

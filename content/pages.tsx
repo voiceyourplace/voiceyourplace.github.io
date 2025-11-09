@@ -279,11 +279,11 @@ export const audioGuideContent: {
       projectPageHref: '/project-slatina',
       episodes: [
         { title: 'Biserica Sfânta Treime', href: 'biserica-sfanta-treime' },
-        { title: 'Centrul Vechi Slatina', href: 'centru-vechi-slatina' },
+        { title: 'Centrul Vechi Slatina', href: 'centrul-vechi-slatina' },
         { title: 'Casa Hanciu', href: 'casa-hanciu' },
         {
           title: 'Fostul cinematograf Victoria',
-          href: 'cinematograf-victoria',
+          href: 'cinematograful-victoria',
         },
         { title: 'Casa Fântâneanu', href: 'casa-fantaneanu' },
         { title: 'Podul Olt', href: 'podul-olt' },
@@ -311,9 +311,9 @@ export const audioGuideContent: {
       projectPageHref: '/project-slatina',
       episodes: [
         { title: 'The Holy Trinity Church', href: 'biserica-sfanta-treime' },
-        { title: `Slatina's Old Centre`, href: 'centru-vechi-slatina' },
+        { title: `Slatina's Old Centre`, href: 'centrul-vechi-slatina' },
         { title: 'The Hanciu House', href: 'casa-hanciu' },
-        { title: 'The former Victoria Cinema', href: 'cinematograf-victoria' },
+        { title: 'The former Victoria Cinema', href: 'cinematograful-victoria' },
         { title: 'The Fântâneanu House', href: 'casa-fantaneanu' },
         { title: 'The bridge over the Olt river', href: 'podul-olt' },
       ],

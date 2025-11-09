@@ -21,9 +21,9 @@ export type CurteaDeArgesPage = (typeof CURTEA_DE_ARGES_PAGES)[number]
 
 export const SLATINA_PAGES = [
   'biserica-sfanta-treime',
-  'centru-vechi-slatina',
+  'centrul-vechi-slatina',
   'casa-hanciu',
-  'cinematograf-victoria',
+  'cinematograful-victoria',
   'casa-fantaneanu',
   'podul-olt',
 ] as const

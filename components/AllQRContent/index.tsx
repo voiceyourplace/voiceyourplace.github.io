@@ -28,9 +28,9 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
     ],
     slatina: [
       'biserica-sfanta-treime',
-      'centru-vechi-slatina',
+      'centrul-vechi-slatina',
       'casa-hanciu',
-      'cinematograf-victoria',
+      'cinematograful-victoria',
       'casa-fantaneanu',
       'podul-olt',
     ],

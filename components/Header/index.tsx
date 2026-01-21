@@ -28,7 +28,10 @@ export default function Header(props: Readonly<IHeaderProps>) {
   const allPages = useAllPages()
 
   useEffect(() => {
-    if (!citiesOpen) return;
+    if (!citiesOpen) {
+      return
+    }
+
     const handleClick = (e: MouseEvent) => {
       if (
         dropdownZoneRef.current &&
@@ -36,12 +39,13 @@ export default function Header(props: Readonly<IHeaderProps>) {
         navRef.current &&
         !navRef.current.contains(e.target as Node)
       ) {
-        closeCities();
+        closeCities()
       }
-    };
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
-  }, [citiesOpen]);
+    }
+
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [citiesOpen])
 
   useEffect(() => {
     if (!open) {
@@ -62,19 +66,19 @@ export default function Header(props: Readonly<IHeaderProps>) {
   }, [open])
 
   const langSwitchHref = useMemo(() => {
-    let path = router.asPath || '/';
-    const newLocale = locale === 'en' ? 'ro' : 'en';
+    let path = router.asPath || '/'
+    const newLocale = locale === 'en' ? 'ro' : 'en'
     // If path contains /community or /comunitate, always go to /ro or /en
     if (/\/(community|comunitate)(\/|$)/.test(path)) {
-      return `/${newLocale}`;
+      return `/${newLocale}`
     }
     // If path contains /qr but not /ro or /en, go to /ro or /en
     if (/\/qr(\/|$)/.test(path) && !/^\/(en|ro)\//.test(path)) {
-      return `/${newLocale}`;
+      return `/${newLocale}`
     }
-    path = path.replace(/^\/(en|ro)(\/|$)/, '/');
-    return path === '/' ? `/${newLocale}` : `/${newLocale}${path}`;
-  }, [router.asPath, locale]);
+    path = path.replace(/^\/(en|ro)(\/|$)/, '/')
+    return path === '/' ? `/${newLocale}` : `/${newLocale}${path}`
+  }, [router.asPath, locale])
 
   return (
     <header
@@ -99,10 +103,7 @@ export default function Header(props: Readonly<IHeaderProps>) {
           className={`${styles.nav} ${open ? styles.open : ''}`}
           ref={navRef}
         >
-          <span
-            className={styles.dropdownSelectZone}
-            ref={dropdownZoneRef}
-          >
+          <span className={styles.dropdownSelectZone} ref={dropdownZoneRef}>
             <span
               style={{ cursor: 'pointer' }}
               onClick={() => setCitiesOpen((v) => !v)}
@@ -110,11 +111,8 @@ export default function Header(props: Readonly<IHeaderProps>) {
               {locale === 'en' ? 'Cities' : 'Orașe'}
             </span>
             {citiesOpen && !open ? (
-              <span
-                className={styles.citiesDropdown}
-                ref={citiesRef}
-              >
-                {(citiesPages)[locale].map((page) => (
+              <span className={styles.citiesDropdown} ref={citiesRef}>
+                {citiesPages[locale].map((page) => (
                   <NavLink
                     key={page.href}
                     href={`/${page.href}`}
@@ -134,11 +132,7 @@ export default function Header(props: Readonly<IHeaderProps>) {
               <span>{page.title}</span>
             </NavLink>
           ))}
-          <NavLink
-            href={langSwitchHref}
-            disableLocale
-            onClick={close}
-          >
+          <NavLink href={langSwitchHref} disableLocale onClick={close}>
             <span>{locale === 'en' ? 'RO' : 'EN'}</span>
           </NavLink>
         </nav>

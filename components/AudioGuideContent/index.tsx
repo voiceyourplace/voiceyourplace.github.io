@@ -1,6 +1,7 @@
 import EpisodeControls from 'components/EpisodeControls'
 import styles from './index.module.scss'
 import NavLink from 'atoms/NavLink'
+import NextRouteButton from 'atoms/NextRouteButton'
 import { audioGuideContent } from 'content/pages'
 import { useLocale } from 'utils/hooks'
 import { useRouter } from 'next/router'
@@ -10,11 +11,10 @@ export interface IAudioGuideContentProps {
   content: (typeof audioGuideContent)['slatina']['ro']
 }
 
-export default function AudioGuideContent({
-  content,
-}: Readonly<IAudioGuideContentProps>) {
+export function AudioGuideContent(props: Readonly<IAudioGuideContentProps>) {
   const locale = useLocale()
   const { asPath } = useRouter()
+  const { content } = props
 
   return (
     <>
@@ -35,17 +35,14 @@ export default function AudioGuideContent({
           {content.imgCaption ? <p>{content.imgCaption}</p> : null}
         </div>
 
-        <div className={styles.moreAboutWrapper}>
-          <NavLink href={content.projectPageHref}>
-            <div className={styles.moreAbout}>
-              <p>
-                {locale === 'en'
-                  ? 'More about the project here'
-                  : 'Mai multe detalii despre proiect aici'}
-              </p>
-            </div>
-          </NavLink>
-        </div>
+        <NextRouteButton
+          href={content.projectPageHref}
+          topText={
+            locale === 'en'
+              ? 'More about the project here'
+              : 'Mai multe detalii despre proiect aici'
+          }
+        />
         <div className={styles.pagesListWrapper}>
           <h3>
             {locale === 'en'
@@ -64,11 +61,13 @@ export default function AudioGuideContent({
             ))}
           </div>
         </div>
-        {asPath.includes('slatina') ? <img
-          className={styles.overlayImage}
-          src='/assets/img/overlay-slatina.png'
-          alt='Overlay'
-        /> : null}
+        {asPath.includes('slatina') ? (
+          <img
+            className={styles.overlayImage}
+            src='/assets/img/overlay-slatina.png'
+            alt='Overlay'
+          />
+        ) : null}
       </div>
     </>
   )

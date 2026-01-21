@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { Cities, Locale } from 'utils/types'
+import { City, CITIES, Locale } from 'utils/types'
 
 import AllQRContent from 'components/AllQRContent'
 
 export default function QrCityPage(props: {
-  city: Cities
+  city: City
   locale: Locale
 }) {
   return (
@@ -13,9 +13,8 @@ export default function QrCityPage(props: {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const cities: Cities[] = ['curtea-de-arges', 'slatina']
   const locales = ['ro', 'en']
-  const paths = cities.flatMap((city) =>
+  const paths = CITIES.flatMap((city) =>
     locales.map((locale) => ({ params: { locale, city } }))
   )
   return {
@@ -28,7 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
-      city: params?.city as Cities,
+      city: params?.city as City,
       locale: params?.locale as string,
     },
   }

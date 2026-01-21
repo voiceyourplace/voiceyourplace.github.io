@@ -1,13 +1,11 @@
 import LandmarkContent from 'features/LandmarkContent'
 
-import { CurteaDeArgesPage, SlatinaPage } from 'utils/types'
+import { LandmarkPage } from 'utils/types'
 import { useCity, useLocale } from 'utils/hooks'
 
 import { CityIntroStoryContent } from 'content/landmark'
 
-export default function Landmark(
-  props: Readonly<{ slug: CurteaDeArgesPage | SlatinaPage }>
-) {
+export default function Landmark(props: Readonly<{ slug: LandmarkPage }>) {
   const locale = useLocale()
   const city = useCity(props.slug)
 

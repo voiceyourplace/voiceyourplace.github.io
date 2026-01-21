@@ -305,7 +305,7 @@ export const CurteaDeArgesProjectContent: BilingualContent<ProjectContentType> =
           Audio ghidul Voice Your Place: Curtea de Argeș cuprinde șase
           episoade: Biserica Sfântul Nicolae Domnesc, Ruinele Bisericii Sân
           Nicoară, Mănăstirea Curtea de Argeș, Biserica Adormirea Maicii
-          Domnului – Olari, Gara Regală și Casa Norocea. Proiectul Voice Your
+          Domnului - Olari, Gara Regală și Casa Norocea. Proiectul Voice Your
           Place și Școala de Vară sunt concepute să fie realizate și în alte
           orașe sau sate din țară. Proiectul de la Curtea de Argeș poate fi
           considerat un proiect pilot, sperăm noi dintr-o rețea de audio
@@ -514,5 +514,258 @@ export const CurteaDeArgesProjectContent: BilingualContent<ProjectContentType> =
       '@The closing party of the Summer School at Curtea de Argeș, 2023',
     imgTeamSrc: '/assets/img/en-project.jpg',
     imgSponsorsSrc: '/assets/img/en-partners-sponsors.png',
+  },
+}
+
+export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
+  ro: {
+    title: 'Voice Your Place Sulina',
+    pageTitle: 'Proiect',
+    presentation: (
+      <>
+        <p>
+          Proiectul „Voice Your Place” se concentrează asupra comunității,
+          apartenenței și valorificării mediului construit prin realizarea unui
+          audio ghid narat de adolescenți despre arhitectura de patrimoniu din
+          orașul lor. Proiectul urmărește crearea unei serii de audio ghiduri
+          care nu oferă o simplă povestire, ci sunt rezultatul unei proces de
+          cunoaștere și apropiere a comunității tinere de patrimoniul construit,
+          oferind în același timp ascultătorului experiența de a auzi prin
+          vocile comunității poveștile locului.
+          <br />
+          În cadrul proiectului, realizarea ghidului audio devine o unealtă
+          pedagogică prin care se oferă încredere în implicarea comunitară și se
+          creează contextul unei acțiuni civice participative unde spiritul
+          ludic și procesul co-creativ sunt puse în prim-plan. Facilitând
+          implicarea activă, întărind apartenența și legătura afectivă cu
+          patrimoniul arhitectural local, proiectul își dorește să ajute la
+          conștientizarea și aprofundarea mediului construit, unde orașul este
+          înțeles ca un bun comun și o responsabilitate comunitară.
+        </p>
+        <p>
+          Audio ghidul Voice Your Place Sulina a fost realizat în cadrul
+          Atelierelor, unde au participat treizeci și patru de adolescenți din
+          comunitatea locală și Tulcea. Pe parcursul lunii iulie au fost
+          realizate ateliere de: patrimoniu arhitectural și fotografie de
+          arhitectură, ornitologie, scriere creativă, actorie, soundscape,
+          repetiții și înregistrări. Atelierele, coordonate de invitați din
+          domeniile creative vizate, au urmărit realizarea unor componente
+          esențiale din alcătuirea audio ghidului. Parcursul multidisciplinar a
+          contribuit la o înțelegere nuanțată a mediului construit, natural și
+          complexității unui loc - prin crearea unor perspective multiple asupra
+          clădirilor studiate și faunei din zonă, unde atelierele au căpătat și
+          o valoare de descoperire.
+        </p>
+        <p>
+          Audio ghidul Voice Your Place Sulina cuprinde șase episoade: Palatul
+          Comisiei Europene a Dunării, Farul Comisiei Europene a Dunării sau
+          Farul Vechi, Bisericile orașului Sulina, Uzina de apă, Cimitirul
+          multietnic și Păsările Deltei din zona Sulinei.
+        </p>
+      </>
+    ),
+    team: (
+      <>
+        <p>Echipa proiectului</p>
+        <p>
+          Participanții Atelierelor Voice Your Place Sulina 2025:
+          <br />
+          Ilaria Nica, Sonia Dima, Delia Chitaef, Alexandru Hariton, Gabriela
+          Croitoru, Iulia Melentiev, Dragoș Călin, Filip Ciprian Măcăilă-Ivanov,
+          Ioana Sacalov, Sabrina Varabiev, Mălina Maxim, Denisa Corsei Burnaz,
+          Andrei Constantin, Andra Oprea, Maria Carp, Magda Gurenciu, Robert
+          Marian Șteflea, Diana Teodora Mocanu, Fabian Cristian Constantin,
+          Ana-Iosefina Frînculeț, Bianca-Maria Dogaru, Maria Bărăgan, Mihaela
+          Cătălina Duzinschi, Ioana-Briana Zavațchi, Lavinia Alexandra Prodan,
+          Bianca Moghilencu, Ana-Maria Petcu, Sonia Marchelov, Riana Cojocaru,
+          Crina-Mirela Pătrașcu, Teodora Achimfiev, Mara Pavel, Xenia Cojocaru,
+          Alexandra Stăneață, Mihai Sebastian Pascal, Andreea Isabela Saru.
+        </p>
+        <p>Autoare și coordonatoare de proiect: Iarina Tavă</p>
+        <p>
+          Manager proiect: Cristina Stîngu
+          <br />
+          Asistent proiect: Alexandra Barbu
+        </p>
+        <p>
+          Audio ghidul a fost realizat în urma unei serii de ateliere:
+          <br />
+          Atelier de patrimoniu arhitectural, susținut de: Iarina Tavă și Marius
+          Vasile
+          <br />
+          Atelier de ornitologie, susținut de: Georgian Constantin
+          <br />
+          Atelier de scriere creativă, susținut de: Maria Martelli
+          <br />
+          Atelier de actorie, susținut de: Alini Medoia
+          <br />
+          Atelier de soundscape, susținut de: Alex Halka
+        </p>
+        <p>
+          Textele episoadelor despre obiectivele de patrimoniu arhitectural au
+          fost scrise de Dorothee Hasnaș.
+          <br />
+          Documentarea despre clădirile de patrimoniu a fost realizată de
+          Florentina Murea-Matache.
+          <br />
+          Textul episodului despre Păsările Deltei a fost scris de Georgian
+          Constantin.
+        </p>
+        <p>
+          Înregistrările de teren au fost realizate de adolescenții participanți
+          la atelierul de soundscape. Înregistrările audio ghidului în limba
+          română au avut loc la Școala Veche în luna iulie, unde au narat elevi
+          de gimnaziu și liceu din Sulina. Înregistrările audio ghidului în
+          limba engleză au avut loc la liceul de arte „George Georgescu” în luna
+          octombrie, unde au narat elevi de liceu din Tulcea.
+        </p>
+        <p>Asistență și coordonare înregistrări: Iarina Tavă și Alex Halka.</p>
+        <p>Editare și mixaj audio ghid: Alex Halka.</p>
+        <p>Identitate vizuală: Diana Necșulescu</p>
+        <p>Design signalistică urbană și grafică website: nuumroom studio</p>
+        <p>Website dezvoltat de: Gabriel Mocanu</p>
+        <p>
+          Proiectul „Voice Your Place Sulina” este realizat de echipa „Voice
+          Your Place” în colaborare cu Asociația Youth Vision for Society.
+        </p>
+        <p>Proiect finanțat de Administrația Fondului Cultural Național.</p>
+        <p>
+          Mulțumim partenerilor noștri:
+          <br />
+          Asociația De-a Arhitectura, Ordinul Arhitecților Filiala Dobrogea,
+          Primăria Sulina, Casa de cultură Sulina, Institutul de Cercetări
+          Eco-Muzeale „Gavrilă Simion” Tulcea, Liceul Jean Bart, Liceul de arte
+          George Georgescu, Liceul Grigore Moisil, Asociația cu drag din Sulina,
+          Travel Delta Star, Nautica Sulina.
+        </p>
+      </>
+    ),
+    caption: 'Placeholder Echipa',
+    imgTeamSrc: '/assets/img/placeholder.webp',
+    imgSponsorsSrc: '/assets/img/ro-sponsors-sulina.jpg',
+  },
+  en: {
+    title: 'Voice Your Place Sulina',
+    pageTitle: 'Project',
+    presentation: (
+      <>
+        <p>
+          The "Voice Your Place" project focuses on community, belonging, and
+          valuing the built environment by creating an audio guide narrated by
+          teenagers about the heritage architecture in their city. The project
+          aims to create a series of audio guides that do not simply tell a
+          story, but are the result of a process of learning and bringing the
+          young community closer to the built heritage, while offering the
+          listener the experience of hearing the stories of the place through
+          the voices of the community.
+          <br />
+          In the framework of the project, the creation of the audio guide
+          becomes an educational tool that builds trust in community involvement
+          and creates the context for participatory civic action where
+          playfulness and the co-creative process are at the forefront. By
+          facilitating active involvement and strengthening the sense of
+          belonging and emotional connection to the local architectural
+          heritage, the project aims to raise awareness and deepen understanding
+          of the built environment, where the city is understood as a common
+          good and a community responsibility.
+        </p>
+        <p>
+          The Voice Your Place Slatina audio guide was created during the
+          Workshops, which were attended by thirty-four teenagers from the local
+          community and Tulcea. Over the course of July, workshops were held on
+          architectural heritage and photography, ornithology, creative writing,
+          acting, soundscape, rehearsals and recording. The workshops,
+          coordinated by guests from the respective creative fields, aimed to
+          develop essential components of the audio guide. The multidisciplinary
+          approach contributed to a nuanced understanding of the built and
+          natural environment and the complexity of a place by creating multiple
+          perspectives on the studied buildings and local fauna, where the
+          workshops also took on a value of discovery.
+        </p>
+        <p>
+          The Voice Your Place Slatina audio guide includes six episodes: The
+          Palace of the European Commission of the Danube, the Lighthouse of the
+          European Commission of the Danube or the Old Lighthouse of Sulina, The
+          Churches of Sulina, The Sulina Waterworks, The Cemetery of Sulina,
+          Birds of the Delta - The Sulina Area.
+        </p>
+      </>
+    ),
+    team: (
+      <>
+        <p>Project team</p>
+        <p>
+          The participants of the Voice Your Place Sulina 2025 Workshops:
+          <br />
+          Ilaria Nica, Sonia Dima, Delia Chitaef, Alexandru Hariton, Gabriela
+          Croitoru, Iulia Melentiev, Dragoș Călin, Filip Ciprian Măcăilă-Ivanov,
+          Ioana Sacalov, Sabrina Varabiev, Mălina Maxim, Denisa Corsei Burnaz,
+          Andrei Constantin, Andra Oprea, Maria Carp, Magda Gurenciu, Robert
+          Marian Șteflea, Diana Teodora Mocanu, Fabian Cristian Constantin,
+          Ana-Iosefina Frînculeț, Bianca-Maria Dogaru, Maria Bărăgan, Mihaela
+          Cătălina Duzinschi, Ioana-Briana Zavațchi, Lavinia Alexandra Prodan,
+          Bianca Moghilencu, Ana-Maria Petcu, Sonia Marchelov, Riana Cojocaru,
+          Crina-Mirela Pătrașcu, Teodora Achimfiev, Mara Pavel, Xenia Cojocaru,
+          Alexandra Stăneață, Mihai Sebastian Pascal, Andreea Isabela Saru.
+        </p>
+        <p>Voice Your Place creator and coordinator: Iarina Tavă</p>
+        <p>
+          Project manager: Cristina Stîngu
+          <br />
+          Project assistant: Alexandra Barbu
+        </p>
+        <p>
+          The audio guide was made during a series of workshops:
+          <br />
+          Architecture workshop with Iarina Tavă and Marius Vasile
+          <br />
+          Ornithology workshop with Georgian Constantin
+          <br />
+          Creative writing workshop with Maria Martelli
+          <br />
+          Acting workshop with Alini Medoia
+          <br />
+          Soundscape workshop with Alex Halka
+        </p>
+        <p>
+          The audio guide texts about the heritage buildings were written by
+          Dorothee Hasnaș. Documentation for the historic buildings was provided
+          by Florentina Murea-Matache. The audio guide text for The Birds of the
+          Delta episode was written by Constantin Georgian.
+        </p>
+        <p>
+          Field recordings were made with the participating teenagers during the
+          soundscape workshop. The Romanian audio guide was recorded by
+          teenagers from Sulina at the Old School, in July. The English version
+          of the audio guide was recorded by teenagers from Tulcea at George
+          Georgescu Arts High School, in October.
+        </p>
+        <p>
+          The recordings were assisted and coordinated by Iarina Tavă and Alex
+          Halka
+        </p>
+        <p>Editing and mixing: Alex Halka</p>
+        <p>Visual identity: Diana Necșulescu</p>
+        <p>City signage design and website design: nuumroom studio</p>
+        <p>Website developed by: Gabriel Mocanu</p>
+        <p>
+          „Voice Your Place Sulina” was developed and implemented by the „Voice
+          Your Place” team in collaboration with Youth Vision for Society
+          Association.
+        </p>
+        <p>Project financed by the National Cultural Fund Administration.</p>
+        <p>
+          We are grateful to our partners: De-a Arhitectura Association, The
+          Romanian Order of Architects - Dobruja Territorial Branch, Sulina City
+          Hall, The Sulina House of Culture, "Gavrilă Simion" Eco-Museum
+          Research Institute Tulcea, Jean Bart Theoretical High School, George
+          Georgescu Arts High School, Grigore Moisil Theoretical High School, Cu
+          drag din Sulina Association, Travel Delta Star, Nautica Sulina.
+        </p>
+      </>
+    ),
+    caption: 'Team Placeholder',
+    imgTeamSrc: '/assets/img/placeholder.webp',
+    imgSponsorsSrc: '/assets/img/en-sponsors-sulina.jpg',
   },
 }

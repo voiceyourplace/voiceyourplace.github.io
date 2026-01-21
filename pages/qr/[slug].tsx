@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { CURTEA_DE_ARGES_PAGES, CurteaDeArgesPage, SLATINA_PAGES } from 'utils/types'
+import { CURTEA_DE_ARGES_PAGES, CurteaDeArgesPage, SLATINA_PAGES, SULINA_PAGES } from 'utils/types'
 
 import QRContent from 'components/QRContent'
 
@@ -11,7 +11,7 @@ export default function ContentPage({ slug }: { slug: CurteaDeArgesPage }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = [...CURTEA_DE_ARGES_PAGES, ...SLATINA_PAGES]
+  const slugs = [...CURTEA_DE_ARGES_PAGES, ...SLATINA_PAGES, ...SULINA_PAGES]
 
   return {
     paths: slugs.map(slug => ({ params: { slug } })),

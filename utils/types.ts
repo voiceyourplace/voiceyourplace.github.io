@@ -6,8 +6,12 @@ export type BilingualContent<T> = {
 
 export type Locale = 'en' | 'ro'
 
-export type Cities = 'curtea-de-arges' | 'slatina'
+export type City = (typeof CITIES)[number]
+export const CITIES = ['curtea-de-arges', 'slatina', 'sulina'] as const
 
+export type LandmarkPage = CurteaDeArgesPage | SlatinaPage | SulinaPage
+
+export type CurteaDeArgesPage = (typeof CURTEA_DE_ARGES_PAGES)[number]
 export const CURTEA_DE_ARGES_PAGES = [
   'biserica-domneasca',
   'san-nicoara',
@@ -17,8 +21,7 @@ export const CURTEA_DE_ARGES_PAGES = [
   'casa-norocea',
 ] as const
 
-export type CurteaDeArgesPage = (typeof CURTEA_DE_ARGES_PAGES)[number]
-
+export type SlatinaPage = (typeof SLATINA_PAGES)[number]
 export const SLATINA_PAGES = [
   'biserica-sfanta-treime',
   'centrul-vechi-slatina',
@@ -28,8 +31,19 @@ export const SLATINA_PAGES = [
   'podul-olt',
 ] as const
 
-export type SlatinaPage = (typeof SLATINA_PAGES)[number]
-
-export const AUDIO_GUIDE_PAGES = ['audio-guide', 'audio-guide-slatina'] as const
+export type SulinaPage = (typeof SULINA_PAGES)[number]
+export const SULINA_PAGES = [
+  'palatul-comisiei-europene',
+  'farul-comisiei-europene',
+  'bisericile-orasului-sulina',
+  'uzina-de-apa',
+  'cimitirul-multietnic',
+  'pasarile-deltei',
+] as const
 
 export type AudioGuidePage = (typeof AUDIO_GUIDE_PAGES)[number]
+export const AUDIO_GUIDE_PAGES = [
+  'audio-guide',
+  'audio-guide-slatina',
+  'audio-guide-sulina',
+] as const

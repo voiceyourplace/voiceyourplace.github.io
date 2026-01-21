@@ -5,21 +5,26 @@ import {
   CurteaDeArgesPage,
   SLATINA_PAGES,
   SlatinaPage,
+  LandmarkPage,
+  CURTEA_DE_ARGES_PAGES,
+  SulinaPage,
 } from 'utils/types'
 
 import styles from './index.module.scss'
-import { CurteaDeArgesContent, SlatinaContent } from 'content/landmark'
+import { CurteaDeArgesContent, SlatinaContent, SulinaContent } from 'content/landmark'
 
-export default function QRContent({
-  slug,
-}: Readonly<{ slug: CurteaDeArgesPage | SlatinaPage }>) {
+export default function QRContent({ slug }: Readonly<{ slug: LandmarkPage }>) {
   const pageData = SLATINA_PAGES.includes(slug as SlatinaPage)
     ? SlatinaContent[slug as SlatinaPage]
-    : CurteaDeArgesContent[slug as CurteaDeArgesPage]
+    : CURTEA_DE_ARGES_PAGES.includes(slug as CurteaDeArgesPage)
+      ? CurteaDeArgesContent[slug as CurteaDeArgesPage]
+      : SulinaContent[slug as SulinaPage]
 
   const audioGuidePage = SLATINA_PAGES.includes(slug as SlatinaPage)
     ? 'audio-guide-slatina'
-    : 'audio-guide'
+    : CURTEA_DE_ARGES_PAGES.includes(slug as CurteaDeArgesPage)
+      ? 'audio-guide'
+      : 'audio-guide-sulina'
 
   return (
     <div className={styles.qrContent}>

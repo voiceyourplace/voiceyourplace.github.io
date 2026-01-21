@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build && touch out/.nojekyll",
-    "deploy:user": "cross-env NEXT_PUBLIC_BASE_PATH=\"\" npm run build && touch out/.nojekyll && gh-pages -d out -b gh-pages --dotfiles"
+    "deploy:user": "cross-env NEXT_PUBLIC_BASE_PATH=\"\" npm run build && touch out/.nojekyll && echo 'voiceyourplace.com' > out/CNAME && gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "@next/third-parties": "^16.0.0",

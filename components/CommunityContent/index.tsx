@@ -4,10 +4,10 @@ import { useCommunityContent, useLocale } from 'utils/hooks'
 
 import styles from './index.module.scss'
 import { CommunityPage, SlatinaCommunityPage } from 'content/pages'
-import { Cities } from 'utils/types'
+import { City } from 'utils/types'
 
 export interface ICommunityContentProps {
-  city: Cities
+  city: City
   cards: {
     back: string
     front: string

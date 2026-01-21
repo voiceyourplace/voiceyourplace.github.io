@@ -1,39 +1,38 @@
-import { Cities, Locale, CurteaDeArgesPage, SlatinaPage } from 'utils/types'
+import {
+  City,
+  Locale,
+  CurteaDeArgesPage,
+  SlatinaPage,
+  CURTEA_DE_ARGES_PAGES,
+  SLATINA_PAGES,
+  LandmarkPage,
+  SULINA_PAGES,
+  SulinaPage,
+} from 'utils/types'
 
 import styles from './index.module.scss'
 
 import QRFooter from 'components/QRFooter'
 import NavLink from 'atoms/NavLink'
 import { useLocale } from 'utils/hooks'
-import { CurteaDeArgesContent, SlatinaContent } from 'content/landmark'
+import {
+  CurteaDeArgesContent,
+  SlatinaContent,
+  SulinaContent,
+} from 'content/landmark'
+
 export interface IAllQRContentProps {
-  city: Cities
+  city: City
   locale: Locale
 }
 
 export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
   const locale = useLocale()
 
-  const slugs: {
-    slatina: SlatinaPage[]
-    'curtea-de-arges': CurteaDeArgesPage[]
-  } = {
-    'curtea-de-arges': [
-      'biserica-domneasca',
-      'san-nicoara',
-      'manastirea-curtea-de-arges',
-      'olari',
-      'gara-regala',
-      'casa-norocea',
-    ],
-    slatina: [
-      'biserica-sfanta-treime',
-      'centrul-vechi-slatina',
-      'casa-hanciu',
-      'cinematograful-victoria',
-      'casa-fantaneanu',
-      'podul-olt',
-    ],
+  const slugs: Record<City, readonly LandmarkPage[]> = {
+    'curtea-de-arges': CURTEA_DE_ARGES_PAGES,
+    slatina: SLATINA_PAGES,
+    sulina: SULINA_PAGES,
   }
 
   return (
@@ -54,45 +53,52 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
           ? 'Discover the heritage buildings included in the Voice Your Place audio guide'
           : 'Descoperă clădirile de patrimoniu cuprinse în audio ghidul Voice Your Place'}
       </p>
-      {slugs[props.city].map((slug) => (
-        <div key={slug} className={styles.box}>
-          <h3>
-            {props.city === 'curtea-de-arges'
-              ? CurteaDeArgesContent[slug as CurteaDeArgesPage][props.locale]
-                .title
-              : SlatinaContent[slug as SlatinaPage][props.locale].title}
-          </h3>
-          <div className={styles.buttonsRow}>
-            <NavLink href={`/${props.locale}/${slug}`} disableLocale>
-              <div className={styles.button}>
-                <img src='/assets/img/qr-all-play.png' alt='Play Button' />
-                <p>
-                  {props.locale === 'en'
-                    ? 'Listen to the episode'
-                    : 'Ascultă episodul'}
-                </p>
-              </div>
-            </NavLink>
-            <a
-              href={
-                props.city === 'curtea-de-arges'
-                  ? CurteaDeArgesContent[slug as CurteaDeArgesPage][
-                    props.locale
-                  ].locationHref
-                  : SlatinaContent[slug as SlatinaPage][props.locale]
-                    .locationHref
-              }
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <div className={styles.button}>
-                <img src='/assets/img/qr-all-pin.png' alt='Pin Button' />
-                <p>{props.locale === 'en' ? 'Location' : 'Locație'}</p>
-              </div>
-            </a>
+      {slugs[props.city].map((slug) => {
+        const locationHref =
+          props.city === 'curtea-de-arges'
+            ? CurteaDeArgesContent[slug as CurteaDeArgesPage][props.locale]
+              .locationHref
+            : props.city === 'slatina'
+              ? SlatinaContent[slug as SlatinaPage][props.locale].locationHref
+              : SulinaContent[slug as SulinaPage][props.locale].locationHref
+
+        return (
+          <div key={slug} className={styles.box}>
+            <h3>
+              {props.city === 'curtea-de-arges'
+                ? CurteaDeArgesContent[slug as CurteaDeArgesPage][props.locale]
+                  .title
+                : props.city === 'slatina'
+                  ? SlatinaContent[slug as SlatinaPage][props.locale].title
+                  : SulinaContent[slug as SulinaPage][props.locale].title}
+            </h3>
+            <div className={styles.buttonsRow}>
+              <NavLink href={`/${props.locale}/${slug}`} disableLocale>
+                <div className={styles.button}>
+                  <img src='/assets/img/qr-all-play.png' alt='Play Button' />
+                  <p>
+                    {props.locale === 'en'
+                      ? 'Listen to the episode'
+                      : 'Ascultă episodul'}
+                  </p>
+                </div>
+              </NavLink>
+              {locationHref ? (
+                <a
+                  href={locationHref}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <div className={styles.button}>
+                    <img src='/assets/img/qr-all-pin.png' alt='Pin Button' />
+                    <p>{props.locale === 'en' ? 'Location' : 'Locație'}</p>
+                  </div>
+                </a>
+              ) : null}
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
 
       <div className={styles.moreAbout}>
         <NavLink

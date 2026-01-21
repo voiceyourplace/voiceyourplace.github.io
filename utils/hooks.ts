@@ -1,14 +1,20 @@
 import { useRouter } from 'next/router'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { communityContent } from 'content/pages'
 import {
-  CurteaDeArgesPage,
-  SlatinaPage,
   SLATINA_PAGES,
-  Cities,
+  City,
+  LandmarkPage,
+  SulinaPage,
+  SlatinaPage,
+  SULINA_PAGES,
 } from 'utils/types'
-import { CurteaDeArgesContent, SlatinaContent } from 'content/landmark'
+import {
+  CurteaDeArgesContent,
+  SlatinaContent,
+  SulinaContent,
+} from 'content/landmark'
 
 export function useLocale() {
   const { asPath } = useRouter()
@@ -26,24 +32,28 @@ export function useLocale() {
   return locale
 }
 
-export const useCity = (page: CurteaDeArgesPage | SlatinaPage) => {
-  if (SLATINA_PAGES.includes(page as any)) {
+export const useCity = (page: LandmarkPage): City => {
+  if (SLATINA_PAGES.includes(page as SlatinaPage)) {
     return 'slatina'
-  } else {
-    return 'curtea-de-arges'
   }
+
+  if (SULINA_PAGES.includes(page as SulinaPage)) {
+    return 'sulina'
+  }
+
+  return 'curtea-de-arges'
 }
 
-export function useCommunityContent(city: Cities) {
+export function useCommunityContent(city: City) {
   const locale = useLocale()
 
   return communityContent[city][locale]
 }
 
-export function useLandmarkContent(page: CurteaDeArgesPage | SlatinaPage) {
+export function useLandmarkContent(page: LandmarkPage) {
   const locale = useLocale()
 
-  return { ...CurteaDeArgesContent, ...SlatinaContent }[
+  return { ...CurteaDeArgesContent, ...SlatinaContent, ...SulinaContent }[
     page ?? 'biserica-domneasca'
   ][locale]
 }

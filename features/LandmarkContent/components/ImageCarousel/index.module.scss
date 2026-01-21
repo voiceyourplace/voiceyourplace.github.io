@@ -1,0 +1,190 @@
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 600px;
+
+  @media (max-width: $container-width) {
+    width: 80%;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+  perspective: 100px;
+}
+
+.carouselViewport {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.carouselSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5%;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    left: 0;
+  }
+
+  &.prev {
+    left: -100%;
+  }
+
+  &.next {
+    left: 100%;
+  }
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  outline: none;
+  padding: 0;
+  transition: opacity 0.2s ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.carouselPrev {
+  left: 1rem;
+
+  @media (max-width: $container-width) {
+    left: 0.5rem;
+  }
+}
+
+.carouselNext {
+  right: 1rem;
+
+  @media (max-width: $container-width) {
+    right: 0.5rem;
+  }
+}
+
+.carouselNavigation {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.carouselNavigationButton {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  padding: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &.active {
+    background-color: #fff;
+    transform: scale(1.2);
+  }
+
+  @media (max-width: $container-width) {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+.caption {
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #fff;
+}

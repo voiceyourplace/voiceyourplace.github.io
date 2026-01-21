@@ -1,13 +1,12 @@
 import EpisodeControls from 'components/EpisodeControls'
 import NavLink from 'atoms/NavLink'
+import NextRouteButton from 'atoms/NextRouteButton'
 
-import {
-  communityStoryContent,
-  CommunityStoryContentData
-} from 'content/pages'
+import { communityStoryContent, CommunityStoryContentData } from 'content/pages'
 
 import {
   CurteaDeArgesPage,
+  LandmarkPage,
   SLATINA_PAGES,
   SlatinaPage,
 } from 'utils/types'
@@ -18,9 +17,10 @@ import styles from './index.module.scss'
 import { useRouter } from 'next/router'
 
 import DocumentTitle from 'atoms/DocumentTitle'
+import ImageCarousel from './components/ImageCarousel'
 
 export interface ILandmarkContentProps {
-  page: CurteaDeArgesPage | SlatinaPage
+  page: LandmarkPage
   storyIntro: React.ReactNode
 }
 
@@ -71,52 +71,43 @@ export default function LandmarkContent(
             ))}
           </div>
         </section>
-        {content.imgSrc ? (
-          <img
-            src={content.imgSrc}
-            alt={content.title}
-            className={styles.episodeImage}
-          />
+        <ImageCarousel images={content.images} />
+        <NextRouteButton
+          href={`/${content.nextHref}`}
+          mainText={content.nextText}
+          topText={
+            locale === 'en'
+              ? `${content.isNextListenOnly ? 'Listen' : 'Visit'} next on the route`
+              : `${content.isNextListenOnly ? 'Ascultați' : 'Vizitați'} în continuare pe traseu`
+          }
+        />
+        {content.story ? (
+          <>
+            <section className={styles.story}>
+              <h2 className={styles.placesAndStoriesTitle}>
+                <img
+                  className={styles.desktopHand}
+                  src='/assets/img/desktop-hand.png'
+                  alt='Voice Your Place Curtea de Arges'
+                />
+                <img
+                  className={styles.mobileHand}
+                  src='/assets/img/mobile-hand.png'
+                  alt='Voice Your Place Curtea de Arges'
+                />
+                {locale === 'en' ? 'Places and Stories' : 'Locuri și povești'}
+              </h2>
+              {props.storyIntro}
+            </section>
+            <section className={styles.story}>
+              <p className={styles.storyTitle}>{mainTitle}</p>
+              <p className={styles.storyTitle}>{subtitle}</p>
+              <p className={styles.storyAuthor}>{`${locale === 'en' ? 'by' : 'de'
+                } ${content.story?.author}`}</p>
+              <p>{content.story?.content}</p>
+            </section>
+          </>
         ) : null}
-        {content.imgCaption ? (
-          <span className={styles.caption}>{content.imgCaption}</span>
-        ) : null}
-        {/* TODO: Extract this component into a separate one */}
-        <div className={styles.moreAboutWrapper}>
-          <NavLink href={`/${content.nextHref}`}>
-            <div className={styles.moreAbout}>
-              <p>
-                {locale === 'en'
-                  ? 'Visit next on the route'
-                  : 'Vizitați în continuare pe traseu'}
-              </p>
-              <h3>{content.nextText}</h3>
-            </div>
-          </NavLink>
-        </div>
-        <section className={styles.story}>
-          <h2 className={styles.placesAndStoriesTitle}>
-            <img
-              className={styles.desktopHand}
-              src='/assets/img/desktop-hand.png'
-              alt='Voice Your Place Curtea de Arges'
-            />
-            <img
-              className={styles.mobileHand}
-              src='/assets/img/mobile-hand.png'
-              alt='Voice Your Place Curtea de Arges'
-            />
-            {locale === 'en' ? 'Places and Stories' : 'Locuri și povești'}
-          </h2>
-          {props.storyIntro}
-        </section>
-        <section className={styles.story}>
-          <p className={styles.storyTitle}>{mainTitle}</p>
-          <p className={styles.storyTitle}>{subtitle}</p>
-          <p className={styles.storyAuthor}>{`${locale === 'en' ? 'by' : 'de'
-            } ${content.story?.author}`}</p>
-          <p>{content.story?.content}</p>
-        </section>
         {otherStories.length ? (
           <div>
             <h2 className={styles.otherStoriesTitle}>
@@ -158,14 +149,13 @@ export default function LandmarkContent(
             </div>
           </NavLink>
         ) : null}
-        <div className={styles.moreAboutWrapper}>
-          <NavLink href={`/${content.nextHref}`}>
-            <div className={styles.moreAbout}>
-              <p>{locale === 'en' ? 'Next episode' : 'Episodul următor'}</p>
-              <h3>{content.nextText}</h3>
-            </div>
-          </NavLink>
-        </div>
+        {content.story ? (
+          <NextRouteButton
+            href={`/${content.nextHref}`}
+            mainText={content.nextText}
+            topText={locale === 'en' ? 'Next episode' : 'Episodul următor'}
+          />
+        ) : null}
       </div>
     </>
   )

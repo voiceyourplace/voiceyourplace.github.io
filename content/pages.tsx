@@ -4,21 +4,26 @@ import { useRouter } from 'next/router'
 import {
   BilingualContent,
   Locale,
-  Cities,
+  City,
   CurteaDeArgesPage,
   SLATINA_PAGES,
   SlatinaPage,
   AudioGuidePage,
+  LandmarkPage,
+  SulinaPage,
+  SULINA_PAGES,
 } from 'utils/types'
 
 export type PageSlug =
   | CurteaDeArgesPage
   | SlatinaPage
+  | SulinaPage
   | AudioGuidePage
   | 'community'
   | 'community-slatina'
   | 'project'
   | 'project-slatina'
+  | 'project-sulina'
   | 'contact'
 
 export const CURTEA_DE_ARGES_COMMUNITY_PAGES = [
@@ -87,7 +92,7 @@ export type CommunityStoryContentData = {
   author: string
   footer: string
   content: React.ReactNode
-  locations?: (CurteaDeArgesPage | SlatinaPage)[]
+  locations?: LandmarkPage[]
 }
 
 export type CommunityStoryContent = {
@@ -103,10 +108,12 @@ export const useCitiesPages = (): BilingualContent<
     ro: [
       { title: 'Curtea de Argeș', href: 'biserica-domneasca' },
       { title: 'Slatina', href: 'biserica-sfanta-treime' },
+      { title: 'Sulina', href: 'palatul-comisiei-europene' },
     ],
     en: [
       { title: 'Curtea de Argeș', href: 'biserica-domneasca' },
       { title: 'Slatina', href: 'biserica-sfanta-treime' },
+      { title: 'Sulina', href: 'palatul-comisiei-europene' },
     ],
   }
 }
@@ -124,24 +131,38 @@ export const useOtherPages = (): BilingualContent<
     'audio-guide-slatina',
   ].some((page) => decodeURIComponent(path).includes(page))
 
+  const shouldRedirectToSulina = [
+    ...SULINA_PAGES,
+    'project-sulina',
+    'audio-guide-sulina',
+  ].some((page) => decodeURIComponent(path).includes(page))
+
   const audioGuideHref = shouldRedirectToSlatina
     ? 'audio-guide-slatina'
-    : 'audio-guide'
-  const communityHref = shouldRedirectToSlatina
+    : shouldRedirectToSulina
+      ? 'audio-guide-sulina'
+      : 'audio-guide'
+
+  const communityHref: PageSlug = shouldRedirectToSlatina
     ? 'community-slatina'
     : 'community'
-  const projectHref = shouldRedirectToSlatina ? 'project-slatina' : 'project'
+
+  const projectHref: PageSlug = shouldRedirectToSlatina
+    ? 'project-slatina'
+    : shouldRedirectToSulina
+      ? 'project-sulina'
+      : 'project'
 
   return {
     ro: [
       { title: 'Audio ghid', href: audioGuideHref },
-      { title: 'Comunitate', href: communityHref },
+      ...(!shouldRedirectToSulina ? [{ title: 'Comunitate', href: communityHref }] : []),
       { title: 'Proiect', href: projectHref },
       { title: 'Contact', href: 'contact' },
     ],
     en: [
       { title: 'Audio Guide', href: audioGuideHref },
-      { title: 'Community', href: communityHref },
+      ...(!shouldRedirectToSulina ? [{ title: 'Community', href: communityHref }] : []),
       { title: 'Project', href: projectHref },
       { title: 'Contact', href: 'contact' },
     ],
@@ -161,18 +182,18 @@ export const useAllPages = (): BilingualContent<
 }
 
 export const audioGuideContent: {
-  [key in Cities]: BilingualContent<{
+  [key in City]: BilingualContent<{
     title: string
     backText: string
-    backHref: SlatinaPage | CurteaDeArgesPage
+    backHref: LandmarkPage
     nextText: string
-    nextHref: SlatinaPage | CurteaDeArgesPage
+    nextHref: LandmarkPage
     audioSrc: string
     infoText: React.ReactNode
     imgSrc: string
     imgCaption?: string
     projectPageHref: string
-    episodes: { title: string; href: SlatinaPage | CurteaDeArgesPage }[]
+    episodes: { title: string; href: LandmarkPage }[]
   }>
 } = {
   'curtea-de-arges': {
@@ -256,7 +277,7 @@ export const audioGuideContent: {
   },
   slatina: {
     ro: {
-      title: 'Despre audio ghidul Voice Your Place',
+      title: 'Despre audio ghidul Voice Your Place Slatina',
       backText: 'Podul peste Olt',
       backHref: 'podul-olt',
       nextText: 'Biserica Sfânta Treime',
@@ -267,15 +288,13 @@ export const audioGuideContent: {
           Slatina 2025, de către adolescenți din comunitatea locală, cu
           sprijinul coordonatorilor de ateliere.
           <br />
-          Mulțumim participanților, colaboratorilor, prietenilor,
-          partenerilor, finanțatorilor și tuturor celor care au contribuit la
-          realizarea sa!
+          Mulțumim participanților, colaboratorilor, prietenilor, partenerilor,
+          finanțatorilor și tuturor celor care au contribuit la realizarea sa!
         </>
       ),
       audioSrc: '/assets/audio/slatina/Generic_RO.mp3',
       imgSrc: '/assets/img/audio-ghid-slatina-cover.jpg',
-      imgCaption:
-        'Foto: Înregistrările audio ghidului, martie 2025, Slatina',
+      imgCaption: 'Foto: Înregistrările audio ghidului, martie 2025, Slatina',
       projectPageHref: '/project-slatina',
       episodes: [
         { title: 'Biserica Sfânta Treime', href: 'biserica-sfanta-treime' },
@@ -290,7 +309,7 @@ export const audioGuideContent: {
       ],
     },
     en: {
-      title: 'About the Voice Your Place Audio Guide',
+      title: 'About the Voice Your Place Slatina audio guide',
       backText: 'The bridge over the Olt river',
       backHref: 'podul-olt',
       nextText: 'The Holy Trinity Church',
@@ -301,8 +320,8 @@ export const audioGuideContent: {
           Workshops by teenagers from the local community with the support of
           the invited coordinators.
           <br />
-          Special thanks to the participants, collaborators, friends,
-          partners, funders and everyone who contributed to its making!
+          Special thanks to the participants, collaborators, friends, partners,
+          funders and everyone who contributed to its making!
         </p>
       ),
       audioSrc: '/assets/audio/slatina/Generic_EN.mp3',
@@ -313,9 +332,107 @@ export const audioGuideContent: {
         { title: 'The Holy Trinity Church', href: 'biserica-sfanta-treime' },
         { title: `Slatina's Old Centre`, href: 'centrul-vechi-slatina' },
         { title: 'The Hanciu House', href: 'casa-hanciu' },
-        { title: 'The former Victoria Cinema', href: 'cinematograful-victoria' },
+        {
+          title: 'The former Victoria Cinema',
+          href: 'cinematograful-victoria',
+        },
         { title: 'The Fântâneanu House', href: 'casa-fantaneanu' },
         { title: 'The bridge over the Olt river', href: 'podul-olt' },
+      ],
+    },
+  },
+  sulina: {
+    ro: {
+      title: 'Despre audio ghidul Voice Your Place Sulina',
+      backText: 'Pasările Deltei din zona Sulinei',
+      backHref: 'pasarile-deltei',
+      nextText: 'Palatul Comisiei Europene a Dunării',
+      nextHref: 'palatul-comisiei-europene',
+      infoText: (
+        <>
+          <p>
+            Audio ghidul a fost realizat în cadrul Atelierelor Voice Your Place
+            Sulina 2025, împreună cu adolescenți din comunitatea locală, cu
+            sprijinul coordonatorilor de ateliere.
+            <br />
+            Mulțumim participanților, colaboratorilor, partenerilor,
+            finanțatorilor și tuturor celor care au contribuit la realizarea sa!
+          </p>
+        </>
+      ),
+      audioSrc: '/assets/audio/sulina/Generic_RO.mp3',
+      imgSrc: '/assets/img/placeholder.webp',
+      imgCaption: 'Audio Guide Placeholder',
+      projectPageHref: '/project-sulina',
+      episodes: [
+        {
+          title: 'Palatul Comisiei Europene a Dunării',
+          href: 'palatul-comisiei-europene',
+        },
+        {
+          title: 'Farul Comisiei Europene a Dunării sau Farul Vechi',
+          href: 'farul-comisiei-europene',
+        },
+        {
+          title: 'Bisericile orașului Sulina',
+          href: 'bisericile-orasului-sulina',
+        },
+        {
+          title: 'Uzina de apa',
+          href: 'uzina-de-apa',
+        },
+        {
+          title: 'Cimitirul multietnic din Sulina',
+          href: 'cimitirul-multietnic',
+        },
+        { title: 'Păsările Deltei din zona Sulinei', href: 'pasarile-deltei' },
+      ],
+    },
+    en: {
+      title: 'About the Voice Your Place Sulina audio guide',
+      backText: 'Birds of the Delta - The Sulina area',
+      backHref: 'pasarile-deltei',
+      nextText: 'The European Commission of the Danube Palace',
+      nextHref: 'palatul-comisiei-europene',
+      infoText: (
+        <p>
+          The audio guide was produced during the Voice Your Place Sulina 2025
+          workshops, together with teenagers from the local community and
+          Tulcea, with the support of the workshop coordinators.
+          <br />
+          Special thanks to the participants, collaborators, partners, funders,
+          and everyone who contributed to its creation!
+        </p>
+      ),
+      audioSrc: '/assets/audio/sulina/Generic_EN.mp3',
+      imgSrc: '/assets/img/placeholder.webp',
+      imgCaption: 'Audio Guide Placeholder',
+      projectPageHref: '/project-sulina',
+      episodes: [
+        {
+          title: 'The European Commission of the Danube Palace',
+          href: 'palatul-comisiei-europene',
+        },
+        {
+          title: 'The Lighthouse of the European Commission of the Danube',
+          href: 'farul-comisiei-europene',
+        },
+        {
+          title: 'The Churches of Sulina',
+          href: 'bisericile-orasului-sulina',
+        },
+        {
+          title: 'The Sulina Waterworks',
+          href: 'uzina-de-apa',
+        },
+        {
+          title: 'The Cemetery of Sulina',
+          href: 'cimitirul-multietnic',
+        },
+        {
+          title: 'Birds of the Delta - The Sulina area',
+          href: 'pasarile-deltei',
+        },
       ],
     },
   },
@@ -608,7 +725,7 @@ export const slatinaCommunityCards: BilingualContent<
 }
 
 export const communityContent: {
-  [key in Cities]: BilingualContent<{
+  [key in City]: BilingualContent<{
     title: string
     description: string
   }>
@@ -635,6 +752,16 @@ export const communityContent: {
       title: 'Places and stories',
       description:
         'Stories written by the teenagers who attended the creative writing workshop of the Voice Your Place: Slatina, in relation with the local built heritage.',
+    },
+  },
+  sulina: {
+    ro: {
+      title: 'Locuri și povești',
+      description: '',
+    },
+    en: {
+      title: 'Places and stories',
+      description: '',
     },
   },
 }

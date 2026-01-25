@@ -640,9 +640,9 @@ export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
         </p>
       </>
     ),
-    caption: 'Placeholder Echipa',
-    imgTeamSrc: '/assets/img/placeholder.webp',
-    imgSponsorsSrc: '/assets/img/ro-sponsors-sulina.jpg',
+    caption: '',
+    imgTeamSrc: '/assets/img/sulina/project.jpg',
+    imgSponsorsSrc: '/assets/img/sulina/sponsors.jpg',
   },
   en: {
     title: 'Voice Your Place Sulina',
@@ -729,8 +729,12 @@ export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
         </p>
         <p>
           The audio guide texts about the heritage buildings were written by
-          Dorothee Hasnaș. Documentation for the historic buildings was provided
-          by Florentina Murea-Matache. The audio guide text for The Birds of the
+          Dorothee Hasnaș.
+          <br />
+          Documentation for the historic buildings was provided
+          by Florentina Murea-Matache.
+          <br />
+          The audio guide text for The Birds of the
           Delta episode was written by Constantin Georgian.
         </p>
         <p>
@@ -764,8 +768,8 @@ export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
         </p>
       </>
     ),
-    caption: 'Team Placeholder',
-    imgTeamSrc: '/assets/img/placeholder.webp',
-    imgSponsorsSrc: '/assets/img/en-sponsors-sulina.jpg',
+    caption: '',
+    imgTeamSrc: '/assets/img/sulina/project.jpg',
+    imgSponsorsSrc: '/assets/img/sulina/sponsors.jpg',
   },
 }

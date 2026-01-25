@@ -23,6 +23,7 @@ export type LandmarkContentType = {
   locationHref: string
   /** Whether the next location is non-physically accessible */
   isNextListenOnly?: boolean
+  customIconHref?: string
 } & IEpisodeControlsProps
 
 export type CurteaDeArgesContentType = {
@@ -748,9 +749,9 @@ export const SulinaContent: SulinaContentType = {
         'Ridicat între anii 1860 și 1868, palatul a servit drept sediu al Comisiunii Europene a Dunării, un organism internațional înființat prin Tratatul de la Paris din 1856, care avea misiunea de a asigura navigabilitatea brațului Sulina și de a administra traficul fluvial în mod eficient și neutru. C.E.D. a transformat Sulina într-un oraș cosmopolit și prosper.',
       ],
       images: [
-        { imgSrc: '/assets/img/sulina-test-1.jpg', imgCaption: 'Palatul Comisiei Europene a Dunării' },
-        { imgSrc: '/assets/img/sulina-test-2.jpg', imgCaption: 'Palatul Comisiei Europene a Dunării' },
-        { imgSrc: '/assets/img/sulina-test-3.jpg', imgCaption: 'Palatul Comisiei Europene a Dunării' },
+        { imgSrc: '/assets/img/sulina/palatul-1.jpg' },
+        { imgSrc: '/assets/img/sulina/palatul-2.jpg' },
+        { imgSrc: '/assets/img/sulina/palatul-3.jpg' },
       ],
       locationHref: 'https://maps.app.goo.gl/pj5aA9GBASEX5ei9A',
       backText: 'Despre audio ghid',
@@ -770,7 +771,11 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'Built between 1860 and 1868, the palace served as the headquarters of the Commission, an international body established by the Treaty of Paris in 1856. The purpose of the Commission was to ensure the navigability of the Sulina branch, as well as managing river traffic in an efficient and neutral way. The Commission transformed Sulina into a prosperous cosmopolitan city.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/palatul-1.jpg' },
+        { imgSrc: '/assets/img/sulina/palatul-2.jpg' },
+        { imgSrc: '/assets/img/sulina/palatul-3.jpg' },
+      ],
       locationHref: 'https://maps.app.goo.gl/pj5aA9GBASEX5ei9A',
       backText: 'About the Audio Guide',
       backHref: 'audio-guide-sulina',
@@ -791,7 +796,12 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'Farul Vechi din Sulina este unul dintre cele mai importante simboluri ale orașului. În 1839 Imperiului Rus, ridică un nou far pe malul drept al Dunării. Comisia preia farul existent și până în 1870 îl modernizează, transformându-l într-un obiectiv tehnic esențial. Farul era parte dintr-un ansamblu complet: locuințe pentru paznici, magazii, ateliere – conceput pentru a funcționa autonom.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/farul-1.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-2.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-3.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-4.jpg' },
+      ],
       locationHref: 'https://maps.app.goo.gl/4isTY8D6Cynoni1k7',
       backText: 'Palatul Comisiei Europene a Dunării',
       backHref: 'palatul-comisiei-europene',
@@ -810,7 +820,12 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'The Old Lighthouse is one of the most important symbols of the town. In 1839, the Russian Empire built a new lighthouse on the right bank of the Danube. The commission took over the existing lighthouse and modernized it by 1870, turning it into an essential technical facility. The lighthouse was part of a larger complex: housing for guards, warehouses, workshops - designed to function autonomously.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/farul-1.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-2.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-3.jpg' },
+        { imgSrc: '/assets/img/sulina/farul-4.jpg' },
+      ],
       locationHref: 'https://maps.app.goo.gl/4isTY8D6Cynoni1k7',
       backText: 'Palace of the European Commission of the Danube',
       backHref: 'palatul-comisiei-europene',
@@ -831,7 +846,13 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'În Sulina au existat, la începutul secolului al XX-lea, peste zece lăcașuri de cult, construite de comunități diferite: ortodocși români și ruși, greci, catolici italieni, armeni, anglicani, musulmani și evrei. Fiecare comunitate a venit cu propriul stil, cu propriile materiale și tradiții de construcție. Astăzi, unele biserici mai există, altele au dispărut, dar toate fac parte din povestea orașului.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/bisericile-1.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-2.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-3.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-4.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-5.jpg' },
+      ],
       locationHref: '',
       backText: 'Farul Comisiei Europene a Dunării sau Farul Vechi',
       backHref: 'farul-comisiei-europene',
@@ -842,7 +863,7 @@ export const SulinaContent: SulinaContentType = {
     en: {
       title: 'The Churches of Sulina',
       aboutEpisode: [
-        'Narrated by: Ana Iosefina Frînculeț, Riana Cojocaru and Crina Pătrașcu',
+        'Narrated by: Ana Iosefina Frînculeț, Riana Cojocaru, Crina Pătrașcu and Maria Bărăgan',
         'Introduction narrated by: Bianca Dogaru',
         'Episode written by: Dorothee Hasnaș',
         'Editing and mixing: Alex Halka',
@@ -850,7 +871,13 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         `At the beginning of the 20th century, there were over ten places of worship in Sulina, built by different communities: Romanian and Russian Orthodox, Greek, Italian Catholic, Armenian, Anglican, Muslim, and Jewish. Each community brought its own style, building materials, and traditions. Today, some churches still exist, others have disappeared, but all are part of the town's history.`,
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/bisericile-1.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-2.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-3.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-4.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-5.jpg' },
+      ],
       locationHref: '',
       backText: 'The Lighthouse of the European Commission of the Danube',
       backHref: 'farul-comisiei-europene',
@@ -871,7 +898,10 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'Uzina de Apă din Sulina este unul dintre cele mai vechi și mai bine păstrate ansambluri de arhitectură industrială din România. Conferințele internaționale de sănătate publică de la finalul secolului al XIX-lea recomandă ca toate orașele-port să aibă sisteme moderne de alimentare cu apă potabilă. Sulina, port internațional aflat la Gura Dunării, a fost printre primele vizate. Construcția uzinei, inclusiv Turnul de Apă, a fost demarată în 1897 și finalizată în jurul anului 1903, cu sprijinul Comisiei Europene a Dunării și al Ministerului Sănătății din România.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/uzina-1.jpg' },
+        { imgSrc: '/assets/img/sulina/uzina-2.jpg' },
+      ],
       locationHref: 'https://maps.app.goo.gl/mz8RzD2kA4ogDX2Y6',
       backText: 'Bisericile orașului Sulina',
       backHref: 'bisericile-orasului-sulina',
@@ -890,7 +920,10 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'The Sulina Waterworks is one of the oldest and best-preserved industrial architecture ensembles in Romania. The International Sanitary Conferences at the end of the 19th century recommended that all port cities have modern drinking water supply systems. Sulina, an international port located at the mouth of the Danube, was among the first to be considered. Construction of the plant, including the Water Tower, began in 1897 and was completed around 1903, with the support of the European Commission of the Danube and the Romanian Ministry of Health.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        { imgSrc: '/assets/img/sulina/uzina-1.jpg' },
+        { imgSrc: '/assets/img/sulina/uzina-2.jpg' },
+      ],
       locationHref: 'https://maps.app.goo.gl/mz8RzD2kA4ogDX2Y6',
       backText: 'The Churches of Sulina',
       backHref: 'bisericile-orasului-sulina',
@@ -911,7 +944,13 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'La Sulina, cimitirele noi se înființează în 1870, la o distanță de 300 de metri de marginea estică a orașului, aproape de mare. Parcelat după confesiune – ortodocși, catolici, protestanți, musulmani și evrei – el reflectă nu doar credințele, ci și estetica fiecărei comunități. Fiecare parcelă respectă orientarea specifică mormintelor, simbolistica și materialele preferate.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        {
+          imgSrc: '/assets/img/sulina/cimitirul.jpg',
+          imgCaption:
+            'Cimitirul musulman, fotografie realizată de Sonia Dima în cadrul atelierului de Patrimoniu Arhitectural',
+        },
+      ],
       locationHref: 'https://maps.app.goo.gl/YnfEifMG4oAD2wga9',
       backText: 'Uzina de apă',
       backHref: 'uzina-de-apa',
@@ -931,11 +970,22 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'In Sulina, new cemeteries were established in 1870, at a distance of 300 meters from the eastern edge of the city, close to the sea. Divided according to religion—Orthodox, Catholic, Protestant, Muslim, and Jewish—it reflects not only the beliefs but also the aesthetics of each community. Each plot respects the specific orientation of the graves, the symbolism, and the preferred materials.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        {
+          imgSrc: '/assets/img/sulina/cimitirul.jpg',
+          imgCaption: (
+            <>
+              The Muslim Cemetery, photo by Sonia Dima,
+              <br />
+              Architectural Heritage Workshop
+            </>
+          ),
+        },
+      ],
       locationHref: 'https://maps.app.goo.gl/YnfEifMG4oAD2wga9',
       backText: 'The Sulina Waterworks',
       backHref: 'uzina-de-apa',
-      nextText: 'Birds of the Delta - the Sulina Area',
+      nextText: <>Birds of the Delta - <br />the Sulina Area</>,
       nextHref: 'pasarile-deltei',
       audioSrc: '/assets/audio/sulina/VYP_Ep5_CimitirulMultietnic_EN.mp3',
     },
@@ -952,7 +1002,128 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'Habitatele complexe din jurul Sulinei sunt adăpost pentru mai mult de 360 de specii de păsări sedentare și migratoare: de la păsări mai tolerante cu prezența umană pe care le regăsim în zona orașului, la păsările din zona mării sau a canalelor înguste înconjurate de stuf și cele care poposesc pe insula K. Sulina, prin diversitatea faunistică ce o înconjoară, devine un loc de întâlnire al lumilor.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        {
+          imgSrc: '/assets/img/sulina/pasarile-1.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-2.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-3.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-4.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-5.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-6.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-7.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-8.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-9.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-10.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-11.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-12.jpg',
+          imgCaption: (
+            <p>
+              Fotografii realizate de Georgian Constantin,
+              <br />
+              iulie 2025, Sulina
+            </p>
+          ),
+        },
+      ],
       locationHref: '',
       backText: 'Cimitirul multietnic din Sulina',
       backHref: 'cimitirul-multietnic',
@@ -971,7 +1142,56 @@ export const SulinaContent: SulinaContentType = {
       aboutObjective: [
         'The complex habitats around Sulina are home to more than 360 species of sedentary and migratory birds: from birds that are more tolerant to human presence, found in the city, to birds in the sea area or narrow canals surrounded by reeds, and those that rest on K Island. Sulina, with its surrounding diversity of fauna, becomes a meeting place of worlds.',
       ],
-      images: [{ imgSrc: '/assets/img/placeholder.webp', imgCaption: 'Placeholder' }],
+      images: [
+        {
+          imgSrc: '/assets/img/sulina/pasarile-1.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-2.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-3.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-4.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-5.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-6.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-7.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-8.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-9.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-10.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-11.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+        {
+          imgSrc: '/assets/img/sulina/pasarile-12.jpg',
+          imgCaption: 'Photos by Georgian Constantin, July 2025, Sulina',
+        },
+      ],
       locationHref: '',
       backText: 'The Cemetery of Sulina',
       backHref: 'cimitirul-multietnic',

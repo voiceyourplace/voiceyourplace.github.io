@@ -9,7 +9,7 @@ export interface IEpisodeControlsProps {
   title: string
   backText: string
   backHref: PageSlug
-  nextText: string
+  nextText: string | React.ReactNode
   nextHref: PageSlug
   audioSrc: string
 }

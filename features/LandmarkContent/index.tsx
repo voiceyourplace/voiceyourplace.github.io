@@ -5,10 +5,8 @@ import NextRouteButton from 'atoms/NextRouteButton'
 import { communityStoryContent, CommunityStoryContentData } from 'content/pages'
 
 import {
-  CurteaDeArgesPage,
   LandmarkPage,
   SLATINA_PAGES,
-  SlatinaPage,
 } from 'utils/types'
 
 import { useLocale, useLandmarkContent } from 'utils/hooks'

@@ -326,7 +326,7 @@ export const audioGuideContent: {
       ),
       audioSrc: '/assets/audio/slatina/Generic_EN.mp3',
       imgSrc: '/assets/img/audio-ghid-slatina-cover.jpg',
-      imgCaption: 'Photo: The audio guide recordings, march 2025, Slatina',
+      imgCaption: 'Photo: The audio guide recordings, March 2025, Slatina',
       projectPageHref: '/project-slatina',
       episodes: [
         { title: 'The Holy Trinity Church', href: 'biserica-sfanta-treime' },
@@ -349,20 +349,18 @@ export const audioGuideContent: {
       nextText: 'Palatul Comisiei Europene a Dunării',
       nextHref: 'palatul-comisiei-europene',
       infoText: (
-        <>
-          <p>
-            Audio ghidul a fost realizat în cadrul Atelierelor Voice Your Place
-            Sulina 2025, împreună cu adolescenți din comunitatea locală, cu
-            sprijinul coordonatorilor de ateliere.
-            <br />
-            Mulțumim participanților, colaboratorilor, partenerilor,
-            finanțatorilor și tuturor celor care au contribuit la realizarea sa!
-          </p>
-        </>
+        <p>
+          Audio ghidul a fost realizat în cadrul Atelierelor Voice Your Place
+          Sulina 2025, împreună cu adolescenți din comunitatea locală, cu
+          sprijinul coordonatorilor de ateliere.
+          <br />
+          Mulțumim participanților, colaboratorilor, partenerilor,
+          finanțatorilor și tuturor celor care au contribuit la realizarea sa!
+        </p>
       ),
       audioSrc: '/assets/audio/sulina/Generic_RO.mp3',
-      imgSrc: '/assets/img/placeholder.webp',
-      imgCaption: 'Audio Guide Placeholder',
+      imgSrc: '/assets/img/sulina/ro-about.jpg',
+      imgCaption: 'Foto: Înregistrările audio ghidului în limba română, iulie 2025, Școala Veche, Sulina',
       projectPageHref: '/project-sulina',
       episodes: [
         {
@@ -405,8 +403,8 @@ export const audioGuideContent: {
         </p>
       ),
       audioSrc: '/assets/audio/sulina/Generic_EN.mp3',
-      imgSrc: '/assets/img/placeholder.webp',
-      imgCaption: 'Audio Guide Placeholder',
+      imgSrc: '/assets/img/sulina/en-about.jpg',
+      imgCaption: 'Photo: Recording the English version of the audio guide, October 2025, “George Georgescu” Arts High School, Tulcea',
       projectPageHref: '/project-sulina',
       episodes: [
         {

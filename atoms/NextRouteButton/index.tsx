@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 export interface INextRouteButtonProps {
   href: string
   topText: string
-  mainText?: string
+  mainText?: string | React.ReactNode
 }
 
 export default function NextRouteButton(props: Readonly<INextRouteButtonProps>) {

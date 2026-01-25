@@ -12,6 +12,7 @@ export interface IEpisodeControlsProps {
   nextText: string | React.ReactNode
   nextHref: PageSlug
   audioSrc: string
+  customIconHref?: string
 }
 
 export default function EpisodeControls(
@@ -30,8 +31,8 @@ export default function EpisodeControls(
           </div>
           <img
             className={styles.icon}
-            src='/assets/img/logo-audio-ghid.png'
-            alt='Headphones'
+            src={props.customIconHref ?? '/assets/img/logo-audio-ghid.png'}
+            alt='EpisodeIcon'
           />
           <div className={styles.mobileControlIcon}>
             <NavLink href={`/${props.nextHref}`}>

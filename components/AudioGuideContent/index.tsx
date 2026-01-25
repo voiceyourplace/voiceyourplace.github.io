@@ -68,6 +68,14 @@ export function AudioGuideContent(props: Readonly<IAudioGuideContentProps>) {
             alt='Overlay'
           />
         ) : null}
+        {asPath.includes('sulina') ? (
+          <img
+            className={styles.overlayImage}
+            style={{ maxWidth: '380px', width: '46%' }}
+            src='/assets/img/sulina/icon-0.png'
+            alt='Overlay'
+          />
+        ) : null}
       </div>
     </>
   )

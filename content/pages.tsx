@@ -388,7 +388,7 @@ export const audioGuideContent: {
     },
     en: {
       title: 'About the Voice Your Place Sulina audio guide',
-      backText: 'Birds of the Delta - The Sulina area',
+      backText: 'Birds of the Delta - The Sulina Area',
       backHref: 'pasarile-deltei',
       nextText: 'The European Commission of the Danube Palace',
       nextHref: 'palatul-comisiei-europene',
@@ -428,7 +428,7 @@ export const audioGuideContent: {
           href: 'cimitirul-multietnic',
         },
         {
-          title: 'Birds of the Delta - The Sulina area',
+          title: 'Birds of the Delta - The Sulina Area',
           href: 'pasarile-deltei',
         },
       ],

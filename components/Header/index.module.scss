@@ -121,6 +121,10 @@
     display: none;
     flex-direction: column;
 
+    .cityTitle {
+      color: #ef3e37 !important;
+    }
+
     span {
       color: var(--brand-color) !important;
     }

@@ -23,7 +23,6 @@ export type LandmarkContentType = {
   locationHref: string
   /** Whether the next location is non-physically accessible */
   isNextListenOnly?: boolean
-  customIconHref?: string
 } & IEpisodeControlsProps
 
 export type CurteaDeArgesContentType = {
@@ -852,6 +851,7 @@ export const SulinaContent: SulinaContentType = {
         { imgSrc: '/assets/img/sulina/bisericile-3.jpg' },
         { imgSrc: '/assets/img/sulina/bisericile-4.jpg' },
         { imgSrc: '/assets/img/sulina/bisericile-5.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-6.jpg' },
       ],
       locationHref: '',
       backText: 'Farul Comisiei Europene a Dunării sau Farul Vechi',
@@ -877,6 +877,7 @@ export const SulinaContent: SulinaContentType = {
         { imgSrc: '/assets/img/sulina/bisericile-3.jpg' },
         { imgSrc: '/assets/img/sulina/bisericile-4.jpg' },
         { imgSrc: '/assets/img/sulina/bisericile-5.jpg' },
+        { imgSrc: '/assets/img/sulina/bisericile-6.jpg' },
       ],
       locationHref: '',
       backText: 'The Lighthouse of the European Commission of the Danube',

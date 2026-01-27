@@ -129,7 +129,17 @@ export default function Header(props: Readonly<IHeaderProps>) {
           </span>
           {(open && citiesOpen ? allPages : otherPages)[locale].map((page) => (
             <NavLink key={page.href} href={`/${page.href}`} onClick={close}>
-              <span>{page.title}</span>
+              <span
+                className={
+                  citiesPages[locale].some(
+                    (cityPage) => cityPage.title === page.title,
+                  )
+                    ? styles.cityTitle
+                    : ''
+                }
+              >
+                {page.title}
+              </span>
             </NavLink>
           ))}
           <NavLink href={langSwitchHref} disableLocale onClick={close}>

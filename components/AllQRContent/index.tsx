@@ -102,7 +102,11 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
 
       <div className={styles.moreAbout}>
         <NavLink
-          href={`/${props.locale}/${props.city === 'slatina' ? 'audio-guide-slatina' : 'audio-guide'
+          href={`/${props.locale}/${props.city === 'slatina'
+            ? 'audio-guide-slatina'
+            : props.city === 'sulina'
+              ? 'audio-guide-sulina'
+              : 'audio-guide'
             }`}
           disableLocale
         >

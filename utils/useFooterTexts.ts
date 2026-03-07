@@ -26,7 +26,7 @@ const texts: Record<'en' | 'ro', FooterTexts> = {
     followUs: 'Follow us:',
     contactLabel: 'CONTACT:',
     email: 'voiceyourplace@gmail.com',
-    copyright: '©VoiceYourPlace 2025',
+    copyright: '©VoiceYourPlace 2026',
   },
   ro: {
     pages: 'PAGINI:',
@@ -39,7 +39,7 @@ const texts: Record<'en' | 'ro', FooterTexts> = {
     followUs: 'Urmăriți-ne pe:',
     contactLabel: 'CONTACT:',
     email: 'voiceyourplace@gmail.com',
-    copyright: '©VoiceYourPlace 2025',
+    copyright: '©VoiceYourPlace 2026',
   },
 }
 

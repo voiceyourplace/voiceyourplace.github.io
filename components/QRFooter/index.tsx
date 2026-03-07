@@ -3,12 +3,12 @@ import SocialMedia from "atoms/SocialMedia";
 import styles from './index.module.scss'
 import { useLocale } from "utils/hooks";
 
-export default function QRFooter({ isDark }: Readonly<{ isDark?: boolean }>) {
+export default function QRFooter({ isDark, isHidingFollowText }: Readonly<{ isDark?: boolean, isHidingFollowText?: boolean }>) {
   const locale = useLocale()
 
   return (
     <footer className={styles.qrFooter}>
-      <p>{locale === 'ro' ? 'Urmăriți-ne pe' : 'Follow us on'}</p>
+      {!isHidingFollowText && <p>{locale === 'ro' ? 'Urmăriți-ne pe' : 'Follow us on'}</p>}
       <div className={styles.socialsWrapper}>
         <SocialMedia isLight={!isDark} />
       </div>
@@ -23,7 +23,7 @@ export default function QRFooter({ isDark }: Readonly<{ isDark?: boolean }>) {
         </a>
       </p>
       <div className={styles.copyright}>
-        <a href='/' style={{ color: isDark ? '#000' : '#fff' }}>©VoiceYourPlace 2025</a>
+        <a href='/' style={{ color: isDark ? '#000' : '#fff' }}>©VoiceYourPlace 2026</a>
       </div>
     </footer>
   )

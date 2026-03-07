@@ -48,10 +48,14 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
       <span className={styles.logo}>
         <img src='/assets/img/logo-audio-ghid.png' alt='Logo Audio Ghid' />
       </span>
-      <p>
+      <p className={styles.discoverText}>
         {locale === 'en'
-          ? 'Discover the heritage buildings included in the Voice Your Place audio guide'
-          : 'Descoperă clădirile de patrimoniu cuprinse în audio ghidul Voice Your Place'}
+          ? 'Discover the heritage buildings included in the'
+          : 'Descoperă clădirile de patrimoniu cuprinse în'}
+        <br />
+        {locale === 'en'
+          ? 'Voice Your Place audio guide'
+          : 'audio ghidul Voice Your Place'}
       </p>
       {slugs[props.city].map((slug) => {
         const locationHref =
@@ -75,7 +79,7 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
             <div className={styles.buttonsRow}>
               <NavLink href={`/${props.locale}/${slug}`} disableLocale>
                 <div className={styles.button}>
-                  <img src='/assets/img/qr-all-play.png' alt='Play Button' />
+                  <img src='/assets/img/play-button.svg' alt='Play Button' />
                   <p>
                     {props.locale === 'en'
                       ? 'Listen to the episode'
@@ -90,7 +94,7 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
                   rel='noopener noreferrer'
                 >
                   <div className={styles.button}>
-                    <img src='/assets/img/qr-all-pin.png' alt='Pin Button' />
+                    <img src='/assets/img/pin.svg' alt='Pin Button' />
                     <p>{props.locale === 'en' ? 'Location' : 'Locație'}</p>
                   </div>
                 </a>
@@ -120,6 +124,14 @@ export default function AllQRContent(props: Readonly<IAllQRContentProps>) {
       </div>
 
       <QRFooter />
+      {props.city === 'sulina' ? (
+        <img
+          className={styles.overlayImage}
+          style={{ maxWidth: '380px', width: '46%' }}
+          src='/assets/img/sulina/icon-0.png'
+          alt='Overlay'
+        />
+      ) : null}
     </div>
   )
 }

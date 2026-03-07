@@ -7,11 +7,20 @@ import {
   SlatinaPage,
   LandmarkPage,
   CURTEA_DE_ARGES_PAGES,
+  SULINA_PAGES,
   SulinaPage,
 } from 'utils/types'
 
 import styles from './index.module.scss'
 import { CurteaDeArgesContent, SlatinaContent, SulinaContent } from 'content/landmark'
+
+function formatTitle(title: string) {
+  const parts = title.split(' - ')
+  if (parts.length === 1) return title
+  return parts.map((part, i) => (
+    <span key={part}>{i < parts.length - 1 ? <>{part} -<br /></> : part}</span>
+  ))
+}
 
 export default function QRContent({ slug }: Readonly<{ slug: LandmarkPage }>) {
   const pageData = SLATINA_PAGES.includes(slug as SlatinaPage)
@@ -34,14 +43,14 @@ export default function QRContent({ slug }: Readonly<{ slug: LandmarkPage }>) {
       <span className={styles.boxes}>
         <NavLink href={`/ro/${slug}`} disableLocale>
           <div className={styles.box}>
-            <p>Ascultati episodul in limba română</p>
-            <h3>{pageData.ro.title}</h3>
+            <p>Ascultați episodul în limba română</p>
+            <h3>{formatTitle(pageData.ro.title)}</h3>
           </div>
         </NavLink>
         <NavLink href={`/en/${slug}`} disableLocale>
           <div className={styles.box}>
             <p>Listen to the episode in English</p>
-            <h3>{pageData.en.title}</h3>
+            <h3>{formatTitle(pageData.en.title)}</h3>
           </div>
         </NavLink>
       </span>
@@ -62,7 +71,15 @@ export default function QRContent({ slug }: Readonly<{ slug: LandmarkPage }>) {
         </div>
       </span>
 
-      <QRFooter />
+      <QRFooter isHidingFollowText />
+      {SULINA_PAGES.includes(slug as SulinaPage) ? (
+        <img
+          className={styles.overlayImage}
+          style={{ maxWidth: '380px', width: '46%' }}
+          src='/assets/img/sulina/icon-0.png'
+          alt='Overlay'
+        />
+      ) : null}
     </div>
   )
 }

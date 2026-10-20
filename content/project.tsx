@@ -670,7 +670,7 @@ export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
           good and a community responsibility.
         </p>
         <p>
-          The Voice Your Place Slatina audio guide was created during the
+          The Voice Your Place Sulina audio guide was created during the
           Workshops, which were attended by thirty-four teenagers from the local
           community and Tulcea. Over the course of July, workshops were held on
           architectural heritage and photography, ornithology, creative writing,
@@ -683,7 +683,7 @@ export const SulinaProjectContent: BilingualContent<ProjectContentType> = {
           workshops also took on a value of discovery.
         </p>
         <p>
-          The Voice Your Place Slatina audio guide includes six episodes: The
+          The Voice Your Place Sulina audio guide includes six episodes: The
           Palace of the European Commission of the Danube, the Lighthouse of the
           European Commission of the Danube or the Old Lighthouse of Sulina, The
           Churches of Sulina, The Sulina Waterworks, The Cemetery of Sulina,
